@@ -1,0 +1,208 @@
+// ------------------------------------
+// PLACEHOLDERS & MIXINS
+// ------------------------------------
+// ------------------------------------
+
+// Background socials
+// ------------------------------------
+
+// Facebook Brand Color
+%bg-facebook {
+	background-color: #35528C;
+	&:hover {
+		background-color: darken(#35528C, 10%);
+	}
+}
+
+// Twitter Brand Color
+%bg-twitter {
+	background-color: #3A93FB;
+	&:hover {
+		background-color: darken(#3A93FB, 10%);
+	}
+}
+
+// Google Brand Color
+%bg-google {
+	background-color: #C93C32;
+	&:hover {
+		background-color: darken(#C93C32, 10%);
+	}
+}
+
+// Instagram Brand Color
+%bg-instagram {
+	background-color: #8a3ab9;
+	&:hover {
+		background-color: darken(#8a3ab9, 10%);
+	}
+}
+
+// Pinterest Brand Color
+%bg-pinterest {
+	background-color: #cd2029;
+	&:hover {
+		background-color: darken(#cd2029, 10%);
+	}
+}
+
+// PAGE SECTION BACKGROUND
+// ------------------------------------
+
+// Added overlay stripes background on Section
+// ------------------------------------
+%section-overlay {
+	position: relative;
+	background-color: transparent;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	&:before {
+		content: '';
+		background: url(../images/stripe_pattern.png) repeat;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 0;
+	}
+
+	&.no-pattern {
+		&:before {
+			background: none;
+		}
+	}
+}
+
+// DROPDOWN TRANSITION
+// ------------------------------------
+
+// Dropdown Transition State
+%dropdown-menu {
+	transform-origin: center top 0px;
+	animation-fill-mode: forwards;
+	transform: scale(1, 0);
+	display: block !important;
+	opacity: 0;
+	visibility: hidden;
+	transition: -webkit-transform 0.5s ease, opacity 0.2s ease;
+	-webkit-transition: -webkit-transform 0.5s ease, opacity 0.2s ease;
+	-moz-transition: -webkit-transform 0.5s ease, opacity 0.2s ease;
+	@media (max-width: $screen-sm-max) {
+		display: none !important;
+	}
+}
+
+// Dropdown Transition on Hover
+%dropdown-menu-hover {
+	display: block !important;
+	opacity: 1;
+	z-index: 1000;
+	visibility: visible;
+	transform: scale(1, 1);
+	transition: -webkit-transform 0.3s ease, opacity 0.2s ease 0.1s;
+	-webkit-transition: -webkit-transform 0.3s ease, opacity 0.2s ease 0.1s;
+	-moz-transition: -webkit-transform 0.3s ease, opacity 0.2s ease 0.1s;
+	@media (max-width: $screen-sm-max) {
+		display: block !important;
+	}
+}
+
+/* MISCELLANEOUS
+------------------------------------ */
+
+/* Make text white */
+%white-text {
+	color: #fff !important;
+}
+
+/* Make text/icon primary */
+%color-primary {
+	color: $brand-primary;
+}
+
+/* Make element background secondary */
+%bg-primary {
+	background-color: $brand-primary;
+}
+
+/* Make element background secondary */
+%bg-secondary {
+	background-color: $brand-secondary;
+}
+
+/* Make element background tertiary */
+%bg-tertiary {
+	background-color: $brand-tertiary;
+}
+
+/* Make link hover to primary */
+%hover-primary {
+	&:hover {
+		color: $brand-primary;
+		text-decoration: none;
+	}
+}
+
+/* Make button hover to primary */
+%btn-hover-primary {
+	border-color: $brand-primary;
+	&:hover {
+		background-color: darken($brand-primary, 10%);
+	}
+}
+
+/* Border color primary */
+%border-primary {
+	border-color: $brand-primary;
+}
+
+/* Make opacity transition */
+%transition-opacity {
+	transition: opacity ease-in-out 0.2s;
+	-webkit-transition: opacity ease-in-out 0.2s;
+	-moz-transition: opacity ease-in-out 0.2s;
+}
+
+/* Make object background to primary color */
+%bg-primary {
+	color: #fff;
+	border-color: $brand-primary;
+	background-color: $brand-primary;
+	&:hover {
+		background-color: darken($brand-primary, 10%);
+		border-color: darken($brand-primary, 10%);
+	}
+}
+
+/* Special btn more on slider */
+%btn-on-slider {
+	color: #fff;
+	border-color: $brand-primary;
+	background-color: $brand-primary;
+	&:hover {
+		border-color: #fff;
+		background-color: #fff;
+		color: $brand-primary;
+	}
+}
+
+/* Make object background to secondary color */
+%bg-secondary {
+	color: #fff;
+	background-color: $brand-secondary;
+}
+
+/* Make object and its child element display to table and table-cell */
+%display-table {
+	display: table;
+	width: 100%;
+	> * {
+		display: table-cell;
+		width: auto;
+		text-align: center;
+		vertical-align: middle;
+	}
+}

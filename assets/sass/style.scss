@@ -1,0 +1,42 @@
+/*
+
+Tonjoo Property App Style
+Copyright 2017 Tonjoo
+Author: @prihatno96
+
+DESCRIPTION:
+------------------------------------
+1) Layout, Grid, Typography, Button and Form, Text Style, on bootstrap folder
+2) Brand Color and others, on _themes.scss
+2) Theme Styling, on _apps.scss 
+
+*/
+
+ // Bootstrap
+ @import "bootstrap";
+ @import "custom-bootstrap/bootstrap-mixins";
+ @import "custom-bootstrap/flex-bootstrap-column.scss";
+
+ // Variables
+ @import "variables/app-variables";
+
+ // Mixins & Placeholders
+ @import "core/function";
+ @import "core/placeholder";
+ 
+ // Font Icons
+ @import "font-icon/flaticon";
+ @import "font-icon/font-awesome";
+ 
+ // Plugins
+ @import "plugins/range-slider";
+ @import "plugins/range-slider-skin";
+ @import "plugins/slick";
+ @import "plugins/slick-theme";
+ @import "plugins/daterangepicker";
+
+ // Cores
+ @import "core/elements";
+ @import "core/themes";
+ @import "core/apps";
+ @import "plugins/loader";

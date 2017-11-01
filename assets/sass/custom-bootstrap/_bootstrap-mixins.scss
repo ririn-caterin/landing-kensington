@@ -1,0 +1,10 @@
+/* BOOTSTRAP FLEX (SAME HEIGHT)
+------------------------------------------ */
+@mixin columns-flex-children($i: 1, $list: ".col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}") {
+  @for $i from (1 + 1) through $grid-columns {
+    $list: "#{$list}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}";
+  }
+  #{$list} {
+  	display: flex;
+  }
+}

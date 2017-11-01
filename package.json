@@ -1,0 +1,20 @@
+{
+  "name": "tonjoo-property",
+  "version": "1.0.0",
+  "description": "Tonjoo Property Theme HTML",
+  "main": "gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "grunt": "^1.0.1",
+    "grunt-sass": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  }
+}

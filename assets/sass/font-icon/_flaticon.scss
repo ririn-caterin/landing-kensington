@@ -1,0 +1,85 @@
+/*
+Flaticon icon font: Flaticon
+Creation date: 23/08/2017 08:16
+*/
+
+@font-face {
+	font-family: "Flaticon";
+	src: url("../fonts/Flaticon.eot");
+	src: url("../fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
+	url("../fonts/Flaticon.woff") format("woff"),
+	url("../fonts/Flaticon.ttf") format("truetype"),
+	url("../fonts/Flaticon.svg#Flaticon") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	@font-face {
+		font-family: "Flaticon";
+		src: url("../fonts/Flaticon.svg#Flaticon") format("svg");
+	}
+}
+
+.fi:before{
+	display: inline-block;
+	font-family: "Flaticon";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	line-height: 1;
+	text-decoration: inherit;
+	text-rendering: optimizeLegibility;
+	text-transform: none;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+.flaticon-bathroom:before { content: "\f100"; }
+.flaticon-detail:before { content: "\f101"; }
+.flaticon-room:before { content: "\f102"; }
+.flaticon-garage:before { content: "\f103"; }
+.flaticon-wide:before { content: "\f104"; }
+.flaticon-more:before { content: "\f105"; }
+.flaticon-project:before { content: "\f106"; }
+.flaticon-play:before { content: "\f107"; }
+.flaticon-support:before { content: "\f108"; }
+.flaticon-sale:before { content: "\f109"; }
+.flaticon-happy:before { content: "\f10a"; }
+.flaticon-clock:before { content: "\f10b"; }
+.flaticon-address:before { content: "\f10c"; }
+.flaticon-cross:before { content: "\f10d"; }
+.flaticon-plus:before { content: "\f10e"; }
+.flaticon-phone:before { content: "\f10f"; }
+.flaticon-rent:before { content: "\f110"; }
+.flaticon-min:before { content: "\f111"; }
+.flaticon-coffee:before { content: "\f112"; }
+.flaticon-cash:before {content: "\f316";}
+.flaticon-guest:before {content: "\f212";}
+.flaticon-map:before {content: "\f393";}
+.flaticon-home:before {content: "\f144";}
+
+$font-Flaticon-bathroom: "\f100";
+$font-Flaticon-detail: "\f101";
+$font-Flaticon-room: "\f102";
+$font-Flaticon-garage: "\f103";
+$font-Flaticon-wide: "\f104";
+$font-Flaticon-more: "\f105";
+$font-Flaticon-project: "\f106";
+$font-Flaticon-play: "\f107";
+$font-Flaticon-support: "\f108";
+$font-Flaticon-sale: "\f109";
+$font-Flaticon-happy: "\f10a";
+$font-Flaticon-clock: "\f10b";
+$font-Flaticon-address: "\f10c";
+$font-Flaticon-cross: "\f10d";
+$font-Flaticon-plus: "\f10e";
+$font-Flaticon-phone: "\f10f";
+$font-Flaticon-rent: "\f110";
+$font-Flaticon-min: "\f111";
+$font-Flaticon-coffee: "\f112";
+$font-Flaticon-cash: "\f316";
+$font-Flaticon-guest: "\f212";
+$font-Flaticon-map: "\f393";
+$font-Flaticon-home: "\f144";

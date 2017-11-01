@@ -1,0 +1,834 @@
+/*
+
+Tonjoo Property App Style
+Copyright 2017 Tonjoo
+Author: @prihatno96
+
+DESCRIPTION:
+SASS Mixin for easy styling elements with the same style
+
+*/
+/* 
+
+TABLE OF CONTENTS:
+
+- Border radius & shadow
+	- Boder Radius
+	- Remove Box Shadow
+	- Panel shadow 
+- Display
+- Position
+	- Make Object Vertical & Horizontal Center
+	- Make Object Vertical Center
+	- Make Object Horizontal Center
+- Background
+	- Add background overlay to make teks/object clearer
+	- Add background overlay on hover
+	- Add Plus Icon on Hover
+	- Diagonal Linear Gradient - To Right Bottom
+- Transition
+	- Transition ease in out
+	- Reset Transform
+	- Object Zoom In
+	- Zoom In (Zoom in + Icon Plus)
+	- Remove zoom in style
+
+*/
+/* MISCELLANEOUS
+------------------------------------ */
+/* Make text white */
+/* Make text/icon primary */
+/* Make element background secondary */
+/* Make element background secondary */
+/* Make element background tertiary */
+/* Make link hover to primary */
+/* Make button hover to primary */
+/* Border color primary */
+/* Make opacity transition */
+/* Make object background to primary color */
+/* Special btn more on slider */
+/* Make object background to secondary color */
+/* Make object and its child element display to table and table-cell */
+.tpb-row.tpb-stretch-row, .tpb-row.tpb-stretch-row-content, .tpb-row.tpb-stretch-row-content-no-padding {
+  overflow: hidden; }
+
+.tpb-row.tpb-stretch-row-content-no-padding > [class*="col-md-"] {
+  padding-left: 0;
+  padding-right: 0; }
+
+/* Reusable Class */
+.stick-top {
+  margin-top: -24px; }
+  @media (max-width: 767px) {
+    .stick-top {
+      margin-top: -12px; } }
+
+.stick-bottom {
+  margin-bottom: -24px; }
+  @media (max-width: 767px) {
+    .stick-bottom {
+      margin-bottom: -12px; } }
+
+.bg-image {
+  background-position: center;
+  background-size: cover; }
+
+.paralax {
+  background-attachement: fixed; }
+
+.pd-vertical-48 {
+  padding: 48px 0; }
+  @media (max-width: 767px) {
+    .pd-vertical-48 {
+      padding: 24px 0; } }
+
+.pd-vertical-24 {
+  padding: 24px 0; }
+  @media (max-width: 767px) {
+    .pd-vertical-24 {
+      padding: 12px 0; } }
+
+/* TPB Component */
+.tpb {
+  margin-bottom: 24px;
+  /* Handling component column depend on tpb-row column */
+  /* TPB Header */
+  /* TPB Section Title */
+  /* TPB Property Simple Search */
+  /* TPB Property Search Map */
+  /* Featured Property */
+  /* Property Search */
+  /* Post List */
+  /* How To */
+  /* Featured Post List */
+  /* TPB Text & HTML */
+  /* Text Icon */
+  /* Social Media */
+  /* Property List */
+  /* Testimony Slider */
+  /* Number */
+  /* Number */
+  /* FAQ */ }
+  @media (max-width: 767px) {
+    .tpb {
+      margin-bottom: 12px; } }
+  .tpb > .row .col-md-2:nth-child(2n+1),
+  .tpb > .row .col-md-3:nth-child(4n+1),
+  .tpb > .row .col-md-4:nth-child(3n+1) {
+    clear: both; }
+  @media (max-width: 768px) {
+    .tpb > .row .col-md-3:last-child,
+    .tpb > .row .col-md-4:last-child,
+    .tpb > .row .col-md-6:last-child {
+      margin-bottom: 0; }
+      .tpb > .row .col-md-3:last-child > .post,
+      .tpb > .row .col-md-3:last-child > .profile-box,
+      .tpb > .row .col-md-3:last-child > .number-box,
+      .tpb > .row .col-md-3:last-child > .property-item,
+      .tpb > .row .col-md-3:last-child > .howto-item,
+      .tpb > .row .col-md-3:last-child > .panel-box,
+      .tpb > .row .col-md-3:last-child > .icon-box,
+      .tpb > .row .col-md-4:last-child > .post,
+      .tpb > .row .col-md-4:last-child > .profile-box,
+      .tpb > .row .col-md-4:last-child > .number-box,
+      .tpb > .row .col-md-4:last-child > .property-item,
+      .tpb > .row .col-md-4:last-child > .howto-item,
+      .tpb > .row .col-md-4:last-child > .panel-box,
+      .tpb > .row .col-md-4:last-child > .icon-box,
+      .tpb > .row .col-md-6:last-child > .post,
+      .tpb > .row .col-md-6:last-child > .profile-box,
+      .tpb > .row .col-md-6:last-child > .number-box,
+      .tpb > .row .col-md-6:last-child > .property-item,
+      .tpb > .row .col-md-6:last-child > .howto-item,
+      .tpb > .row .col-md-6:last-child > .panel-box,
+      .tpb > .row .col-md-6:last-child > .icon-box {
+        margin-bottom: 0; } }
+  @media (min-width: 480px) and (max-width: 992px) {
+    .tpb > .row .col-md-6,
+    .tpb > .row .col-md-3,
+    .tpb > .row .col-md-4 {
+      width: 50%;
+      float: left;
+      clear: none; }
+      .tpb > .row .col-md-6:nth-child(4n+1), .tpb > .row .col-md-6:nth-child(3n+1),
+      .tpb > .row .col-md-3:nth-child(4n+1),
+      .tpb > .row .col-md-3:nth-child(3n+1),
+      .tpb > .row .col-md-4:nth-child(4n+1),
+      .tpb > .row .col-md-4:nth-child(3n+1) {
+        clear: none; }
+      .tpb > .row .col-md-6:nth-child(2n+1),
+      .tpb > .row .col-md-3:nth-child(2n+1),
+      .tpb > .row .col-md-4:nth-child(2n+1) {
+        clear: both; } }
+  @media (min-width: 992px) {
+    .tpb.col-md-12 > .row {
+      /* make list column margin-bottom: 0; */ }
+      .tpb.col-md-12 > .row .col-md-3:nth-last-child(1), .tpb.col-md-12 > .row .col-md-3:nth-last-child(2), .tpb.col-md-12 > .row .col-md-3:nth-last-child(3), .tpb.col-md-12 > .row .col-md-3:nth-last-child(4) {
+        margin-bottom: 0; }
+        .tpb.col-md-12 > .row .col-md-3:nth-last-child(1) > .post,
+        .tpb.col-md-12 > .row .col-md-3:nth-last-child(1) > .profile-box,
+        .tpb.col-md-12 > .row .col-md-3:nth-last-child(1) > .number-box,
+        .tpb.col-md-12 > .row .col-md-3:nth-last-child(1) > .property-item,
+        .tpb.col-md-12 > .row .col-md-3:nth-last-child(1) > .howto-item,
+        .tpb.col-md-12 > .row .col-md-3:nth-last-child(1) > .panel-box,
+        .tpb.col-md-12 > .row .col-md-3:nth-last-child(1) > .icon-box, .tpb.col-md-12 > .row .col-md-3:nth-last-child(2) > .post,
+        .tpb.col-md-12 > .row .col-md-3:nth-last-child(2) > .profile-box,
+        .tpb.col-md-12 > .row .col-md-3:nth-last-child(2) > .number-box,
+        .tpb.col-md-12 > .row .col-md-3:nth-last-child(2) > .property-item,
+        .tpb.col-md-12 > .row .col-md-3:nth-last-child(2) > .howto-item,
+        .tpb.col-md-12 > .row .col-md-3:nth-last-child(2) > .panel-box,
+        .tpb.col-md-12 > .row .col-md-3:nth-last-child(2) > .icon-box, .tpb.col-md-12 > .row .col-md-3:nth-last-child(3) > .post,
+        .tpb.col-md-12 > .row .col-md-3:nth-last-child(3) > .profile-box,
+        .tpb.col-md-12 > .row .col-md-3:nth-last-child(3) > .number-box,
+        .tpb.col-md-12 > .row .col-md-3:nth-last-child(3) > .property-item,
+        .tpb.col-md-12 > .row .col-md-3:nth-last-child(3) > .howto-item,
+        .tpb.col-md-12 > .row .col-md-3:nth-last-child(3) > .panel-box,
+        .tpb.col-md-12 > .row .col-md-3:nth-last-child(3) > .icon-box, .tpb.col-md-12 > .row .col-md-3:nth-last-child(4) > .post,
+        .tpb.col-md-12 > .row .col-md-3:nth-last-child(4) > .profile-box,
+        .tpb.col-md-12 > .row .col-md-3:nth-last-child(4) > .number-box,
+        .tpb.col-md-12 > .row .col-md-3:nth-last-child(4) > .property-item,
+        .tpb.col-md-12 > .row .col-md-3:nth-last-child(4) > .howto-item,
+        .tpb.col-md-12 > .row .col-md-3:nth-last-child(4) > .panel-box,
+        .tpb.col-md-12 > .row .col-md-3:nth-last-child(4) > .icon-box {
+          margin-bottom: 0; }
+      .tpb.col-md-12 > .row .col-md-4:nth-last-child(1), .tpb.col-md-12 > .row .col-md-4:nth-last-child(2), .tpb.col-md-12 > .row .col-md-4:nth-last-child(3) {
+        margin-bottom: 0; }
+        .tpb.col-md-12 > .row .col-md-4:nth-last-child(1) > .post,
+        .tpb.col-md-12 > .row .col-md-4:nth-last-child(1) > .profile-box,
+        .tpb.col-md-12 > .row .col-md-4:nth-last-child(1) > .number-box,
+        .tpb.col-md-12 > .row .col-md-4:nth-last-child(1) > .property-item,
+        .tpb.col-md-12 > .row .col-md-4:nth-last-child(1) > .howto-item,
+        .tpb.col-md-12 > .row .col-md-4:nth-last-child(1) > .panel-box,
+        .tpb.col-md-12 > .row .col-md-4:nth-last-child(1) > .icon-box, .tpb.col-md-12 > .row .col-md-4:nth-last-child(2) > .post,
+        .tpb.col-md-12 > .row .col-md-4:nth-last-child(2) > .profile-box,
+        .tpb.col-md-12 > .row .col-md-4:nth-last-child(2) > .number-box,
+        .tpb.col-md-12 > .row .col-md-4:nth-last-child(2) > .property-item,
+        .tpb.col-md-12 > .row .col-md-4:nth-last-child(2) > .howto-item,
+        .tpb.col-md-12 > .row .col-md-4:nth-last-child(2) > .panel-box,
+        .tpb.col-md-12 > .row .col-md-4:nth-last-child(2) > .icon-box, .tpb.col-md-12 > .row .col-md-4:nth-last-child(3) > .post,
+        .tpb.col-md-12 > .row .col-md-4:nth-last-child(3) > .profile-box,
+        .tpb.col-md-12 > .row .col-md-4:nth-last-child(3) > .number-box,
+        .tpb.col-md-12 > .row .col-md-4:nth-last-child(3) > .property-item,
+        .tpb.col-md-12 > .row .col-md-4:nth-last-child(3) > .howto-item,
+        .tpb.col-md-12 > .row .col-md-4:nth-last-child(3) > .panel-box,
+        .tpb.col-md-12 > .row .col-md-4:nth-last-child(3) > .icon-box {
+          margin-bottom: 0; }
+      .tpb.col-md-12 > .row .col-md-6:nth-last-child(1), .tpb.col-md-12 > .row .col-md-6:nth-last-child(2) {
+        margin-bottom: 0; }
+        .tpb.col-md-12 > .row .col-md-6:nth-last-child(1) > .post,
+        .tpb.col-md-12 > .row .col-md-6:nth-last-child(1) > .profile-box,
+        .tpb.col-md-12 > .row .col-md-6:nth-last-child(1) > .number-box,
+        .tpb.col-md-12 > .row .col-md-6:nth-last-child(1) > .property-item,
+        .tpb.col-md-12 > .row .col-md-6:nth-last-child(1) > .howto-item,
+        .tpb.col-md-12 > .row .col-md-6:nth-last-child(1) > .panel-box,
+        .tpb.col-md-12 > .row .col-md-6:nth-last-child(1) > .icon-box, .tpb.col-md-12 > .row .col-md-6:nth-last-child(2) > .post,
+        .tpb.col-md-12 > .row .col-md-6:nth-last-child(2) > .profile-box,
+        .tpb.col-md-12 > .row .col-md-6:nth-last-child(2) > .number-box,
+        .tpb.col-md-12 > .row .col-md-6:nth-last-child(2) > .property-item,
+        .tpb.col-md-12 > .row .col-md-6:nth-last-child(2) > .howto-item,
+        .tpb.col-md-12 > .row .col-md-6:nth-last-child(2) > .panel-box,
+        .tpb.col-md-12 > .row .col-md-6:nth-last-child(2) > .icon-box {
+          margin-bottom: 0; }
+    .tpb.col-md-9 > .row .col-md-3 {
+      width: 33.3333333333%; }
+      .tpb.col-md-9 > .row .col-md-3:nth-child(4n+1) {
+        clear: none; }
+      .tpb.col-md-9 > .row .col-md-3:nth-child(3n+1) {
+        clear: both; }
+    .tpb.col-md-9 > .row .col-md-3:nth-last-child(1), .tpb.col-md-9 > .row .col-md-3:nth-last-child(2), .tpb.col-md-9 > .row .col-md-3:nth-last-child(3),
+    .tpb.col-md-9 > .row .col-md-4:nth-last-child(1),
+    .tpb.col-md-9 > .row .col-md-4:nth-last-child(2),
+    .tpb.col-md-9 > .row .col-md-4:nth-last-child(3) {
+      margin-bottom: 0; }
+      .tpb.col-md-9 > .row .col-md-3:nth-last-child(1) > .post,
+      .tpb.col-md-9 > .row .col-md-3:nth-last-child(1) > .profile-box,
+      .tpb.col-md-9 > .row .col-md-3:nth-last-child(1) > .number-box,
+      .tpb.col-md-9 > .row .col-md-3:nth-last-child(1) > .property-item,
+      .tpb.col-md-9 > .row .col-md-3:nth-last-child(1) > .howto-item,
+      .tpb.col-md-9 > .row .col-md-3:nth-last-child(1) > .panel-box,
+      .tpb.col-md-9 > .row .col-md-3:nth-last-child(1) > .icon-box, .tpb.col-md-9 > .row .col-md-3:nth-last-child(2) > .post,
+      .tpb.col-md-9 > .row .col-md-3:nth-last-child(2) > .profile-box,
+      .tpb.col-md-9 > .row .col-md-3:nth-last-child(2) > .number-box,
+      .tpb.col-md-9 > .row .col-md-3:nth-last-child(2) > .property-item,
+      .tpb.col-md-9 > .row .col-md-3:nth-last-child(2) > .howto-item,
+      .tpb.col-md-9 > .row .col-md-3:nth-last-child(2) > .panel-box,
+      .tpb.col-md-9 > .row .col-md-3:nth-last-child(2) > .icon-box, .tpb.col-md-9 > .row .col-md-3:nth-last-child(3) > .post,
+      .tpb.col-md-9 > .row .col-md-3:nth-last-child(3) > .profile-box,
+      .tpb.col-md-9 > .row .col-md-3:nth-last-child(3) > .number-box,
+      .tpb.col-md-9 > .row .col-md-3:nth-last-child(3) > .property-item,
+      .tpb.col-md-9 > .row .col-md-3:nth-last-child(3) > .howto-item,
+      .tpb.col-md-9 > .row .col-md-3:nth-last-child(3) > .panel-box,
+      .tpb.col-md-9 > .row .col-md-3:nth-last-child(3) > .icon-box,
+      .tpb.col-md-9 > .row .col-md-4:nth-last-child(1) > .post,
+      .tpb.col-md-9 > .row .col-md-4:nth-last-child(1) > .profile-box,
+      .tpb.col-md-9 > .row .col-md-4:nth-last-child(1) > .number-box,
+      .tpb.col-md-9 > .row .col-md-4:nth-last-child(1) > .property-item,
+      .tpb.col-md-9 > .row .col-md-4:nth-last-child(1) > .howto-item,
+      .tpb.col-md-9 > .row .col-md-4:nth-last-child(1) > .panel-box,
+      .tpb.col-md-9 > .row .col-md-4:nth-last-child(1) > .icon-box,
+      .tpb.col-md-9 > .row .col-md-4:nth-last-child(2) > .post,
+      .tpb.col-md-9 > .row .col-md-4:nth-last-child(2) > .profile-box,
+      .tpb.col-md-9 > .row .col-md-4:nth-last-child(2) > .number-box,
+      .tpb.col-md-9 > .row .col-md-4:nth-last-child(2) > .property-item,
+      .tpb.col-md-9 > .row .col-md-4:nth-last-child(2) > .howto-item,
+      .tpb.col-md-9 > .row .col-md-4:nth-last-child(2) > .panel-box,
+      .tpb.col-md-9 > .row .col-md-4:nth-last-child(2) > .icon-box,
+      .tpb.col-md-9 > .row .col-md-4:nth-last-child(3) > .post,
+      .tpb.col-md-9 > .row .col-md-4:nth-last-child(3) > .profile-box,
+      .tpb.col-md-9 > .row .col-md-4:nth-last-child(3) > .number-box,
+      .tpb.col-md-9 > .row .col-md-4:nth-last-child(3) > .property-item,
+      .tpb.col-md-9 > .row .col-md-4:nth-last-child(3) > .howto-item,
+      .tpb.col-md-9 > .row .col-md-4:nth-last-child(3) > .panel-box,
+      .tpb.col-md-9 > .row .col-md-4:nth-last-child(3) > .icon-box {
+        margin-bottom: 0; }
+    .tpb.col-md-8 > .row .col-md-3,
+    .tpb.col-md-8 > .row .col-md-4, .tpb.col-md-7 > .row .col-md-3,
+    .tpb.col-md-7 > .row .col-md-4, .tpb.col-md-6 > .row .col-md-3,
+    .tpb.col-md-6 > .row .col-md-4 {
+      width: 50%; }
+      .tpb.col-md-8 > .row .col-md-3:nth-child(4n+1), .tpb.col-md-8 > .row .col-md-3:nth-child(3n+1),
+      .tpb.col-md-8 > .row .col-md-4:nth-child(4n+1),
+      .tpb.col-md-8 > .row .col-md-4:nth-child(3n+1), .tpb.col-md-7 > .row .col-md-3:nth-child(4n+1), .tpb.col-md-7 > .row .col-md-3:nth-child(3n+1),
+      .tpb.col-md-7 > .row .col-md-4:nth-child(4n+1),
+      .tpb.col-md-7 > .row .col-md-4:nth-child(3n+1), .tpb.col-md-6 > .row .col-md-3:nth-child(4n+1), .tpb.col-md-6 > .row .col-md-3:nth-child(3n+1),
+      .tpb.col-md-6 > .row .col-md-4:nth-child(4n+1),
+      .tpb.col-md-6 > .row .col-md-4:nth-child(3n+1) {
+        clear: none; }
+      .tpb.col-md-8 > .row .col-md-3:nth-child(2n+1),
+      .tpb.col-md-8 > .row .col-md-4:nth-child(2n+1), .tpb.col-md-7 > .row .col-md-3:nth-child(2n+1),
+      .tpb.col-md-7 > .row .col-md-4:nth-child(2n+1), .tpb.col-md-6 > .row .col-md-3:nth-child(2n+1),
+      .tpb.col-md-6 > .row .col-md-4:nth-child(2n+1) {
+        clear: both; }
+    .tpb.col-md-8 > .row .col-md-3:nth-last-child(1), .tpb.col-md-8 > .row .col-md-3:nth-last-child(2),
+    .tpb.col-md-8 > .row .col-md-4:nth-last-child(1),
+    .tpb.col-md-8 > .row .col-md-4:nth-last-child(2),
+    .tpb.col-md-8 > .row .col-md-6:nth-last-child(1),
+    .tpb.col-md-8 > .row .col-md-6:nth-last-child(2), .tpb.col-md-7 > .row .col-md-3:nth-last-child(1), .tpb.col-md-7 > .row .col-md-3:nth-last-child(2),
+    .tpb.col-md-7 > .row .col-md-4:nth-last-child(1),
+    .tpb.col-md-7 > .row .col-md-4:nth-last-child(2),
+    .tpb.col-md-7 > .row .col-md-6:nth-last-child(1),
+    .tpb.col-md-7 > .row .col-md-6:nth-last-child(2), .tpb.col-md-6 > .row .col-md-3:nth-last-child(1), .tpb.col-md-6 > .row .col-md-3:nth-last-child(2),
+    .tpb.col-md-6 > .row .col-md-4:nth-last-child(1),
+    .tpb.col-md-6 > .row .col-md-4:nth-last-child(2),
+    .tpb.col-md-6 > .row .col-md-6:nth-last-child(1),
+    .tpb.col-md-6 > .row .col-md-6:nth-last-child(2) {
+      margin-bottom: 0; }
+      .tpb.col-md-8 > .row .col-md-3:nth-last-child(1) > .post,
+      .tpb.col-md-8 > .row .col-md-3:nth-last-child(1) > .profile-box,
+      .tpb.col-md-8 > .row .col-md-3:nth-last-child(1) > .number-box,
+      .tpb.col-md-8 > .row .col-md-3:nth-last-child(1) > .property-item,
+      .tpb.col-md-8 > .row .col-md-3:nth-last-child(1) > .howto-item,
+      .tpb.col-md-8 > .row .col-md-3:nth-last-child(1) > .panel-box,
+      .tpb.col-md-8 > .row .col-md-3:nth-last-child(1) > .icon-box, .tpb.col-md-8 > .row .col-md-3:nth-last-child(2) > .post,
+      .tpb.col-md-8 > .row .col-md-3:nth-last-child(2) > .profile-box,
+      .tpb.col-md-8 > .row .col-md-3:nth-last-child(2) > .number-box,
+      .tpb.col-md-8 > .row .col-md-3:nth-last-child(2) > .property-item,
+      .tpb.col-md-8 > .row .col-md-3:nth-last-child(2) > .howto-item,
+      .tpb.col-md-8 > .row .col-md-3:nth-last-child(2) > .panel-box,
+      .tpb.col-md-8 > .row .col-md-3:nth-last-child(2) > .icon-box,
+      .tpb.col-md-8 > .row .col-md-4:nth-last-child(1) > .post,
+      .tpb.col-md-8 > .row .col-md-4:nth-last-child(1) > .profile-box,
+      .tpb.col-md-8 > .row .col-md-4:nth-last-child(1) > .number-box,
+      .tpb.col-md-8 > .row .col-md-4:nth-last-child(1) > .property-item,
+      .tpb.col-md-8 > .row .col-md-4:nth-last-child(1) > .howto-item,
+      .tpb.col-md-8 > .row .col-md-4:nth-last-child(1) > .panel-box,
+      .tpb.col-md-8 > .row .col-md-4:nth-last-child(1) > .icon-box,
+      .tpb.col-md-8 > .row .col-md-4:nth-last-child(2) > .post,
+      .tpb.col-md-8 > .row .col-md-4:nth-last-child(2) > .profile-box,
+      .tpb.col-md-8 > .row .col-md-4:nth-last-child(2) > .number-box,
+      .tpb.col-md-8 > .row .col-md-4:nth-last-child(2) > .property-item,
+      .tpb.col-md-8 > .row .col-md-4:nth-last-child(2) > .howto-item,
+      .tpb.col-md-8 > .row .col-md-4:nth-last-child(2) > .panel-box,
+      .tpb.col-md-8 > .row .col-md-4:nth-last-child(2) > .icon-box,
+      .tpb.col-md-8 > .row .col-md-6:nth-last-child(1) > .post,
+      .tpb.col-md-8 > .row .col-md-6:nth-last-child(1) > .profile-box,
+      .tpb.col-md-8 > .row .col-md-6:nth-last-child(1) > .number-box,
+      .tpb.col-md-8 > .row .col-md-6:nth-last-child(1) > .property-item,
+      .tpb.col-md-8 > .row .col-md-6:nth-last-child(1) > .howto-item,
+      .tpb.col-md-8 > .row .col-md-6:nth-last-child(1) > .panel-box,
+      .tpb.col-md-8 > .row .col-md-6:nth-last-child(1) > .icon-box,
+      .tpb.col-md-8 > .row .col-md-6:nth-last-child(2) > .post,
+      .tpb.col-md-8 > .row .col-md-6:nth-last-child(2) > .profile-box,
+      .tpb.col-md-8 > .row .col-md-6:nth-last-child(2) > .number-box,
+      .tpb.col-md-8 > .row .col-md-6:nth-last-child(2) > .property-item,
+      .tpb.col-md-8 > .row .col-md-6:nth-last-child(2) > .howto-item,
+      .tpb.col-md-8 > .row .col-md-6:nth-last-child(2) > .panel-box,
+      .tpb.col-md-8 > .row .col-md-6:nth-last-child(2) > .icon-box, .tpb.col-md-7 > .row .col-md-3:nth-last-child(1) > .post,
+      .tpb.col-md-7 > .row .col-md-3:nth-last-child(1) > .profile-box,
+      .tpb.col-md-7 > .row .col-md-3:nth-last-child(1) > .number-box,
+      .tpb.col-md-7 > .row .col-md-3:nth-last-child(1) > .property-item,
+      .tpb.col-md-7 > .row .col-md-3:nth-last-child(1) > .howto-item,
+      .tpb.col-md-7 > .row .col-md-3:nth-last-child(1) > .panel-box,
+      .tpb.col-md-7 > .row .col-md-3:nth-last-child(1) > .icon-box, .tpb.col-md-7 > .row .col-md-3:nth-last-child(2) > .post,
+      .tpb.col-md-7 > .row .col-md-3:nth-last-child(2) > .profile-box,
+      .tpb.col-md-7 > .row .col-md-3:nth-last-child(2) > .number-box,
+      .tpb.col-md-7 > .row .col-md-3:nth-last-child(2) > .property-item,
+      .tpb.col-md-7 > .row .col-md-3:nth-last-child(2) > .howto-item,
+      .tpb.col-md-7 > .row .col-md-3:nth-last-child(2) > .panel-box,
+      .tpb.col-md-7 > .row .col-md-3:nth-last-child(2) > .icon-box,
+      .tpb.col-md-7 > .row .col-md-4:nth-last-child(1) > .post,
+      .tpb.col-md-7 > .row .col-md-4:nth-last-child(1) > .profile-box,
+      .tpb.col-md-7 > .row .col-md-4:nth-last-child(1) > .number-box,
+      .tpb.col-md-7 > .row .col-md-4:nth-last-child(1) > .property-item,
+      .tpb.col-md-7 > .row .col-md-4:nth-last-child(1) > .howto-item,
+      .tpb.col-md-7 > .row .col-md-4:nth-last-child(1) > .panel-box,
+      .tpb.col-md-7 > .row .col-md-4:nth-last-child(1) > .icon-box,
+      .tpb.col-md-7 > .row .col-md-4:nth-last-child(2) > .post,
+      .tpb.col-md-7 > .row .col-md-4:nth-last-child(2) > .profile-box,
+      .tpb.col-md-7 > .row .col-md-4:nth-last-child(2) > .number-box,
+      .tpb.col-md-7 > .row .col-md-4:nth-last-child(2) > .property-item,
+      .tpb.col-md-7 > .row .col-md-4:nth-last-child(2) > .howto-item,
+      .tpb.col-md-7 > .row .col-md-4:nth-last-child(2) > .panel-box,
+      .tpb.col-md-7 > .row .col-md-4:nth-last-child(2) > .icon-box,
+      .tpb.col-md-7 > .row .col-md-6:nth-last-child(1) > .post,
+      .tpb.col-md-7 > .row .col-md-6:nth-last-child(1) > .profile-box,
+      .tpb.col-md-7 > .row .col-md-6:nth-last-child(1) > .number-box,
+      .tpb.col-md-7 > .row .col-md-6:nth-last-child(1) > .property-item,
+      .tpb.col-md-7 > .row .col-md-6:nth-last-child(1) > .howto-item,
+      .tpb.col-md-7 > .row .col-md-6:nth-last-child(1) > .panel-box,
+      .tpb.col-md-7 > .row .col-md-6:nth-last-child(1) > .icon-box,
+      .tpb.col-md-7 > .row .col-md-6:nth-last-child(2) > .post,
+      .tpb.col-md-7 > .row .col-md-6:nth-last-child(2) > .profile-box,
+      .tpb.col-md-7 > .row .col-md-6:nth-last-child(2) > .number-box,
+      .tpb.col-md-7 > .row .col-md-6:nth-last-child(2) > .property-item,
+      .tpb.col-md-7 > .row .col-md-6:nth-last-child(2) > .howto-item,
+      .tpb.col-md-7 > .row .col-md-6:nth-last-child(2) > .panel-box,
+      .tpb.col-md-7 > .row .col-md-6:nth-last-child(2) > .icon-box, .tpb.col-md-6 > .row .col-md-3:nth-last-child(1) > .post,
+      .tpb.col-md-6 > .row .col-md-3:nth-last-child(1) > .profile-box,
+      .tpb.col-md-6 > .row .col-md-3:nth-last-child(1) > .number-box,
+      .tpb.col-md-6 > .row .col-md-3:nth-last-child(1) > .property-item,
+      .tpb.col-md-6 > .row .col-md-3:nth-last-child(1) > .howto-item,
+      .tpb.col-md-6 > .row .col-md-3:nth-last-child(1) > .panel-box,
+      .tpb.col-md-6 > .row .col-md-3:nth-last-child(1) > .icon-box, .tpb.col-md-6 > .row .col-md-3:nth-last-child(2) > .post,
+      .tpb.col-md-6 > .row .col-md-3:nth-last-child(2) > .profile-box,
+      .tpb.col-md-6 > .row .col-md-3:nth-last-child(2) > .number-box,
+      .tpb.col-md-6 > .row .col-md-3:nth-last-child(2) > .property-item,
+      .tpb.col-md-6 > .row .col-md-3:nth-last-child(2) > .howto-item,
+      .tpb.col-md-6 > .row .col-md-3:nth-last-child(2) > .panel-box,
+      .tpb.col-md-6 > .row .col-md-3:nth-last-child(2) > .icon-box,
+      .tpb.col-md-6 > .row .col-md-4:nth-last-child(1) > .post,
+      .tpb.col-md-6 > .row .col-md-4:nth-last-child(1) > .profile-box,
+      .tpb.col-md-6 > .row .col-md-4:nth-last-child(1) > .number-box,
+      .tpb.col-md-6 > .row .col-md-4:nth-last-child(1) > .property-item,
+      .tpb.col-md-6 > .row .col-md-4:nth-last-child(1) > .howto-item,
+      .tpb.col-md-6 > .row .col-md-4:nth-last-child(1) > .panel-box,
+      .tpb.col-md-6 > .row .col-md-4:nth-last-child(1) > .icon-box,
+      .tpb.col-md-6 > .row .col-md-4:nth-last-child(2) > .post,
+      .tpb.col-md-6 > .row .col-md-4:nth-last-child(2) > .profile-box,
+      .tpb.col-md-6 > .row .col-md-4:nth-last-child(2) > .number-box,
+      .tpb.col-md-6 > .row .col-md-4:nth-last-child(2) > .property-item,
+      .tpb.col-md-6 > .row .col-md-4:nth-last-child(2) > .howto-item,
+      .tpb.col-md-6 > .row .col-md-4:nth-last-child(2) > .panel-box,
+      .tpb.col-md-6 > .row .col-md-4:nth-last-child(2) > .icon-box,
+      .tpb.col-md-6 > .row .col-md-6:nth-last-child(1) > .post,
+      .tpb.col-md-6 > .row .col-md-6:nth-last-child(1) > .profile-box,
+      .tpb.col-md-6 > .row .col-md-6:nth-last-child(1) > .number-box,
+      .tpb.col-md-6 > .row .col-md-6:nth-last-child(1) > .property-item,
+      .tpb.col-md-6 > .row .col-md-6:nth-last-child(1) > .howto-item,
+      .tpb.col-md-6 > .row .col-md-6:nth-last-child(1) > .panel-box,
+      .tpb.col-md-6 > .row .col-md-6:nth-last-child(1) > .icon-box,
+      .tpb.col-md-6 > .row .col-md-6:nth-last-child(2) > .post,
+      .tpb.col-md-6 > .row .col-md-6:nth-last-child(2) > .profile-box,
+      .tpb.col-md-6 > .row .col-md-6:nth-last-child(2) > .number-box,
+      .tpb.col-md-6 > .row .col-md-6:nth-last-child(2) > .property-item,
+      .tpb.col-md-6 > .row .col-md-6:nth-last-child(2) > .howto-item,
+      .tpb.col-md-6 > .row .col-md-6:nth-last-child(2) > .panel-box,
+      .tpb.col-md-6 > .row .col-md-6:nth-last-child(2) > .icon-box {
+        margin-bottom: 0; }
+    .tpb.col-md-5 > .row .col-md-6,
+    .tpb.col-md-5 > .row .col-md-3,
+    .tpb.col-md-5 > .row .col-md-4, .tpb.col-md-4 > .row .col-md-6,
+    .tpb.col-md-4 > .row .col-md-3,
+    .tpb.col-md-4 > .row .col-md-4, .tpb.col-md-3 > .row .col-md-6,
+    .tpb.col-md-3 > .row .col-md-3,
+    .tpb.col-md-3 > .row .col-md-4 {
+      width: 100%; }
+      .tpb.col-md-5 > .row .col-md-6:nth-child(4n+1), .tpb.col-md-5 > .row .col-md-6:nth-child(3n+1), .tpb.col-md-5 > .row .col-md-6:nth-child(2n+1),
+      .tpb.col-md-5 > .row .col-md-3:nth-child(4n+1),
+      .tpb.col-md-5 > .row .col-md-3:nth-child(3n+1),
+      .tpb.col-md-5 > .row .col-md-3:nth-child(2n+1),
+      .tpb.col-md-5 > .row .col-md-4:nth-child(4n+1),
+      .tpb.col-md-5 > .row .col-md-4:nth-child(3n+1),
+      .tpb.col-md-5 > .row .col-md-4:nth-child(2n+1), .tpb.col-md-4 > .row .col-md-6:nth-child(4n+1), .tpb.col-md-4 > .row .col-md-6:nth-child(3n+1), .tpb.col-md-4 > .row .col-md-6:nth-child(2n+1),
+      .tpb.col-md-4 > .row .col-md-3:nth-child(4n+1),
+      .tpb.col-md-4 > .row .col-md-3:nth-child(3n+1),
+      .tpb.col-md-4 > .row .col-md-3:nth-child(2n+1),
+      .tpb.col-md-4 > .row .col-md-4:nth-child(4n+1),
+      .tpb.col-md-4 > .row .col-md-4:nth-child(3n+1),
+      .tpb.col-md-4 > .row .col-md-4:nth-child(2n+1), .tpb.col-md-3 > .row .col-md-6:nth-child(4n+1), .tpb.col-md-3 > .row .col-md-6:nth-child(3n+1), .tpb.col-md-3 > .row .col-md-6:nth-child(2n+1),
+      .tpb.col-md-3 > .row .col-md-3:nth-child(4n+1),
+      .tpb.col-md-3 > .row .col-md-3:nth-child(3n+1),
+      .tpb.col-md-3 > .row .col-md-3:nth-child(2n+1),
+      .tpb.col-md-3 > .row .col-md-4:nth-child(4n+1),
+      .tpb.col-md-3 > .row .col-md-4:nth-child(3n+1),
+      .tpb.col-md-3 > .row .col-md-4:nth-child(2n+1) {
+        clear: none; }
+      .tpb.col-md-5 > .row .col-md-6:last-child,
+      .tpb.col-md-5 > .row .col-md-3:last-child,
+      .tpb.col-md-5 > .row .col-md-4:last-child, .tpb.col-md-4 > .row .col-md-6:last-child,
+      .tpb.col-md-4 > .row .col-md-3:last-child,
+      .tpb.col-md-4 > .row .col-md-4:last-child, .tpb.col-md-3 > .row .col-md-6:last-child,
+      .tpb.col-md-3 > .row .col-md-3:last-child,
+      .tpb.col-md-3 > .row .col-md-4:last-child {
+        margin-bottom: 0; }
+        .tpb.col-md-5 > .row .col-md-6:last-child > .post,
+        .tpb.col-md-5 > .row .col-md-6:last-child > .profile-box,
+        .tpb.col-md-5 > .row .col-md-6:last-child > .number-box,
+        .tpb.col-md-5 > .row .col-md-6:last-child > .property-item,
+        .tpb.col-md-5 > .row .col-md-6:last-child > .howto-item,
+        .tpb.col-md-5 > .row .col-md-6:last-child > .panel-box,
+        .tpb.col-md-5 > .row .col-md-6:last-child > .icon-box,
+        .tpb.col-md-5 > .row .col-md-3:last-child > .post,
+        .tpb.col-md-5 > .row .col-md-3:last-child > .profile-box,
+        .tpb.col-md-5 > .row .col-md-3:last-child > .number-box,
+        .tpb.col-md-5 > .row .col-md-3:last-child > .property-item,
+        .tpb.col-md-5 > .row .col-md-3:last-child > .howto-item,
+        .tpb.col-md-5 > .row .col-md-3:last-child > .panel-box,
+        .tpb.col-md-5 > .row .col-md-3:last-child > .icon-box,
+        .tpb.col-md-5 > .row .col-md-4:last-child > .post,
+        .tpb.col-md-5 > .row .col-md-4:last-child > .profile-box,
+        .tpb.col-md-5 > .row .col-md-4:last-child > .number-box,
+        .tpb.col-md-5 > .row .col-md-4:last-child > .property-item,
+        .tpb.col-md-5 > .row .col-md-4:last-child > .howto-item,
+        .tpb.col-md-5 > .row .col-md-4:last-child > .panel-box,
+        .tpb.col-md-5 > .row .col-md-4:last-child > .icon-box, .tpb.col-md-4 > .row .col-md-6:last-child > .post,
+        .tpb.col-md-4 > .row .col-md-6:last-child > .profile-box,
+        .tpb.col-md-4 > .row .col-md-6:last-child > .number-box,
+        .tpb.col-md-4 > .row .col-md-6:last-child > .property-item,
+        .tpb.col-md-4 > .row .col-md-6:last-child > .howto-item,
+        .tpb.col-md-4 > .row .col-md-6:last-child > .panel-box,
+        .tpb.col-md-4 > .row .col-md-6:last-child > .icon-box,
+        .tpb.col-md-4 > .row .col-md-3:last-child > .post,
+        .tpb.col-md-4 > .row .col-md-3:last-child > .profile-box,
+        .tpb.col-md-4 > .row .col-md-3:last-child > .number-box,
+        .tpb.col-md-4 > .row .col-md-3:last-child > .property-item,
+        .tpb.col-md-4 > .row .col-md-3:last-child > .howto-item,
+        .tpb.col-md-4 > .row .col-md-3:last-child > .panel-box,
+        .tpb.col-md-4 > .row .col-md-3:last-child > .icon-box,
+        .tpb.col-md-4 > .row .col-md-4:last-child > .post,
+        .tpb.col-md-4 > .row .col-md-4:last-child > .profile-box,
+        .tpb.col-md-4 > .row .col-md-4:last-child > .number-box,
+        .tpb.col-md-4 > .row .col-md-4:last-child > .property-item,
+        .tpb.col-md-4 > .row .col-md-4:last-child > .howto-item,
+        .tpb.col-md-4 > .row .col-md-4:last-child > .panel-box,
+        .tpb.col-md-4 > .row .col-md-4:last-child > .icon-box, .tpb.col-md-3 > .row .col-md-6:last-child > .post,
+        .tpb.col-md-3 > .row .col-md-6:last-child > .profile-box,
+        .tpb.col-md-3 > .row .col-md-6:last-child > .number-box,
+        .tpb.col-md-3 > .row .col-md-6:last-child > .property-item,
+        .tpb.col-md-3 > .row .col-md-6:last-child > .howto-item,
+        .tpb.col-md-3 > .row .col-md-6:last-child > .panel-box,
+        .tpb.col-md-3 > .row .col-md-6:last-child > .icon-box,
+        .tpb.col-md-3 > .row .col-md-3:last-child > .post,
+        .tpb.col-md-3 > .row .col-md-3:last-child > .profile-box,
+        .tpb.col-md-3 > .row .col-md-3:last-child > .number-box,
+        .tpb.col-md-3 > .row .col-md-3:last-child > .property-item,
+        .tpb.col-md-3 > .row .col-md-3:last-child > .howto-item,
+        .tpb.col-md-3 > .row .col-md-3:last-child > .panel-box,
+        .tpb.col-md-3 > .row .col-md-3:last-child > .icon-box,
+        .tpb.col-md-3 > .row .col-md-4:last-child > .post,
+        .tpb.col-md-3 > .row .col-md-4:last-child > .profile-box,
+        .tpb.col-md-3 > .row .col-md-4:last-child > .number-box,
+        .tpb.col-md-3 > .row .col-md-4:last-child > .property-item,
+        .tpb.col-md-3 > .row .col-md-4:last-child > .howto-item,
+        .tpb.col-md-3 > .row .col-md-4:last-child > .panel-box,
+        .tpb.col-md-3 > .row .col-md-4:last-child > .icon-box {
+          margin-bottom: 0; } }
+  @media (max-width: 991px) {
+    .tpb.col-md-9 > .row .col-md-3 {
+      width: 33.3333333333%; }
+      .tpb.col-md-9 > .row .col-md-3:nth-child(4n+1) {
+        clear: none; }
+      .tpb.col-md-9 > .row .col-md-3:nth-child(3n+1) {
+        clear: both; } }
+  .tpb .section-header,
+  .tpb .section-header.header-center {
+    margin-bottom: 24px; }
+  @media (max-width: 480px) {
+    .tpb .section-header {
+      margin-bottom: 12px; } }
+  .tpb.tpb-spacer {
+    margin-bottom: 0; }
+  .tpb.tpb-section_title .section-header {
+    margin-bottom: 0; }
+  @media (min-width: 992px) {
+    .tpb.tpb-property_search_map .panel-box {
+      left: 48px; } }
+  @media (max-width: 767px) {
+    .tpb.tpb-property_search_map .search-map {
+      padding-top: 0; }
+    .tpb.tpb-property_search_map .search-map .container {
+      padding: 0; }
+    .tpb.tpb-property_search_map .search-map .panel-box {
+      margin-bottom: 12px; } }
+  .tpb.tpb-featured-property .property-item .property-content {
+    height: auto; }
+  .tpb.tpb-featured-property .property-item .property-image img {
+    max-height: 360px;
+    object-fit: cover; }
+  @media (max-width: 767px) {
+    .tpb.tpb-featured-property .property-item {
+      margin-bottom: 12px; } }
+  @media (min-width: 992px) {
+    .tpb.tpb-featured-property .featured-property-slider.has-background .property-item {
+      left: 48px; } }
+  .tpb.tpb-featured-property .featured-property-slider:not(.has-background) .slick-arrow {
+    display: none !important; }
+  .tpb.tpb-featured-property .featured-property-slider:not(.has-background) .slick-dots {
+    position: static; }
+    .tpb.tpb-featured-property .featured-property-slider:not(.has-background) .slick-dots li {
+      width: 36px;
+      height: 24px;
+      position: relative;
+      vertical-align: middle;
+      margin: 0 6px; }
+    .tpb.tpb-featured-property .featured-property-slider:not(.has-background) .slick-dots li button {
+      transition: all ease-in-out 0.2s;
+      -webkit-transition: all ease-in-out 0.2s;
+      -moz-transition: all ease-in-out 0.2s;
+      margin-top: 10px;
+      height: 3px;
+      padding: 0;
+      width: 100%;
+      border-radius: 0 !important;
+      background-color: #293848; }
+    .tpb.tpb-featured-property .featured-property-slider:not(.has-background) .slick-dots li:hover button,
+    .tpb.tpb-featured-property .featured-property-slider:not(.has-background) .slick-dots li.slick-active button {
+      background-color: #43D3B1; }
+  @media (min-width: 992px) {
+    .tpb.tpb-property_search.col-md-9 .form-body > .row .col-md-4,
+    .tpb.tpb-property_search.col-md-9 .form-body > .row .col-md-3, .tpb.tpb-property_search.col-md-8 .form-body > .row .col-md-4,
+    .tpb.tpb-property_search.col-md-8 .form-body > .row .col-md-3, .tpb.tpb-property_search.col-md-7 .form-body > .row .col-md-4,
+    .tpb.tpb-property_search.col-md-7 .form-body > .row .col-md-3, .tpb.tpb-property_search.col-md-6 .form-body > .row .col-md-4,
+    .tpb.tpb-property_search.col-md-6 .form-body > .row .col-md-3 {
+      width: 50%; }
+    .tpb.tpb-property_search.col-md-9 .form-body > .row:last-child .col-md-4:last-child,
+    .tpb.tpb-property_search.col-md-9 .form-body > .row:last-child .col-md-3:last-child, .tpb.tpb-property_search.col-md-8 .form-body > .row:last-child .col-md-4:last-child,
+    .tpb.tpb-property_search.col-md-8 .form-body > .row:last-child .col-md-3:last-child, .tpb.tpb-property_search.col-md-7 .form-body > .row:last-child .col-md-4:last-child,
+    .tpb.tpb-property_search.col-md-7 .form-body > .row:last-child .col-md-3:last-child, .tpb.tpb-property_search.col-md-6 .form-body > .row:last-child .col-md-4:last-child,
+    .tpb.tpb-property_search.col-md-6 .form-body > .row:last-child .col-md-3:last-child {
+      width: 100%; }
+    .tpb.tpb-property_search.col-md-5 .tabmenu-header .nav-tabs li, .tpb.tpb-property_search.col-md-4 .tabmenu-header .nav-tabs li, .tpb.tpb-property_search.col-md-3 .tabmenu-header .nav-tabs li {
+      width: 50%; }
+    .tpb.tpb-property_search.col-md-5 .form-body > .row .col-md-4,
+    .tpb.tpb-property_search.col-md-5 .form-body > .row .col-md-3, .tpb.tpb-property_search.col-md-4 .form-body > .row .col-md-4,
+    .tpb.tpb-property_search.col-md-4 .form-body > .row .col-md-3, .tpb.tpb-property_search.col-md-3 .form-body > .row .col-md-4,
+    .tpb.tpb-property_search.col-md-3 .form-body > .row .col-md-3 {
+      width: 100%; }
+      .tpb.tpb-property_search.col-md-5 .form-body > .row .col-md-4:last-child,
+      .tpb.tpb-property_search.col-md-5 .form-body > .row .col-md-3:last-child, .tpb.tpb-property_search.col-md-4 .form-body > .row .col-md-4:last-child,
+      .tpb.tpb-property_search.col-md-4 .form-body > .row .col-md-3:last-child, .tpb.tpb-property_search.col-md-3 .form-body > .row .col-md-4:last-child,
+      .tpb.tpb-property_search.col-md-3 .form-body > .row .col-md-3:last-child {
+        margin-bottom: 0; } }
+  @media (max-width: 480px) {
+    .tpb.tpb-property_search .property-search {
+      margin-bottom: 12px; } }
+  .tpb.tpb-post_list .post {
+    padding-top: 0; }
+    .tpb.tpb-post_list .post .post-title {
+      font-size: 18px;
+      line-height: 24px;
+      overflow: hidden;
+      max-height: 72px;
+      margin-bottom: 12px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical; }
+    .tpb.tpb-post_list .post .post-meta li {
+      margin-right: 8px; }
+    .tpb.tpb-post_list .post .post-image img {
+      height: 180px;
+      width: 100%;
+      object-fit: cover; }
+    .tpb.tpb-post_list .post .post-entries {
+      line-height: 18px;
+      max-height: 54px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical; }
+    @media (max-width: 767px) {
+      .tpb.tpb-post_list .post {
+        margin-bottom: 12px; }
+        .tpb.tpb-post_list .post .post-meta li {
+          display: inline-block; } }
+  .tpb.tpb-post_list > .row .col-md-6 .post-image img,
+  .tpb.tpb-post_list > .row .col-md-4 .post-image img {
+    height: 240px; }
+  .tpb.tpb-video .howto-item {
+    margin-bottom: 24px; }
+    .tpb.tpb-video .howto-item a > img {
+      max-height: 300px;
+      object-fit: cover; }
+  @media (max-width: 480px) {
+    .tpb.tpb-video .howto-item {
+      margin-bottom: 12px; } }
+  .tpb.tpb-featured_post_list .slider-item .slider-content .item-title {
+    max-height: 100px;
+    overflow: hidden; }
+  @media (min-width: 992px) {
+    .tpb.tpb-featured_post_list.col-md-9 .slider-item .slider-content .item-title, .tpb.tpb-featured_post_list.col-md-8 .slider-item .slider-content .item-title, .tpb.tpb-featured_post_list.col-md-7 .slider-item .slider-content .item-title, .tpb.tpb-featured_post_list.col-md-6 .slider-item .slider-content .item-title, .tpb.tpb-featured_post_list.col-md-5 .slider-item .slider-content .item-title, .tpb.tpb-featured_post_list.col-md-4 .slider-item .slider-content .item-title, .tpb.tpb-featured_post_list.col-md-3 .slider-item .slider-content .item-title {
+      font-size: 40px; }
+    .tpb.tpb-featured_post_list.col-md-9 .slider-item .slider-content .item-title,
+    .tpb.tpb-featured_post_list.col-md-9 .slider-item .slider-content .item-description, .tpb.tpb-featured_post_list.col-md-8 .slider-item .slider-content .item-title,
+    .tpb.tpb-featured_post_list.col-md-8 .slider-item .slider-content .item-description, .tpb.tpb-featured_post_list.col-md-7 .slider-item .slider-content .item-title,
+    .tpb.tpb-featured_post_list.col-md-7 .slider-item .slider-content .item-description, .tpb.tpb-featured_post_list.col-md-6 .slider-item .slider-content .item-title,
+    .tpb.tpb-featured_post_list.col-md-6 .slider-item .slider-content .item-description, .tpb.tpb-featured_post_list.col-md-5 .slider-item .slider-content .item-title,
+    .tpb.tpb-featured_post_list.col-md-5 .slider-item .slider-content .item-description, .tpb.tpb-featured_post_list.col-md-4 .slider-item .slider-content .item-title,
+    .tpb.tpb-featured_post_list.col-md-4 .slider-item .slider-content .item-description, .tpb.tpb-featured_post_list.col-md-3 .slider-item .slider-content .item-title,
+    .tpb.tpb-featured_post_list.col-md-3 .slider-item .slider-content .item-description {
+      margin-bottom: 12px; }
+    .tpb.tpb-featured_post_list.col-md-6 .slider-item .slider-content, .tpb.tpb-featured_post_list.col-md-5 .slider-item .slider-content, .tpb.tpb-featured_post_list.col-md-4 .slider-item .slider-content, .tpb.tpb-featured_post_list.col-md-3 .slider-item .slider-content {
+      padding: 0 24px; }
+      .tpb.tpb-featured_post_list.col-md-6 .slider-item .slider-content .item-title, .tpb.tpb-featured_post_list.col-md-5 .slider-item .slider-content .item-title, .tpb.tpb-featured_post_list.col-md-4 .slider-item .slider-content .item-title, .tpb.tpb-featured_post_list.col-md-3 .slider-item .slider-content .item-title {
+        font-size: 36px; }
+    .tpb.tpb-featured_post_list.col-md-5 .slider-item .slider-content .item-description, .tpb.tpb-featured_post_list.col-md-4 .slider-item .slider-content .item-description, .tpb.tpb-featured_post_list.col-md-3 .slider-item .slider-content .item-description {
+      margin-bottom: 0; }
+    .tpb.tpb-featured_post_list.col-md-5 .slider-item .slider-content .btn-primary, .tpb.tpb-featured_post_list.col-md-4 .slider-item .slider-content .btn-primary, .tpb.tpb-featured_post_list.col-md-3 .slider-item .slider-content .btn-primary {
+      display: none; }
+    .tpb.tpb-featured_post_list.col-md-4 .slider-item .slider-content .item-title, .tpb.tpb-featured_post_list.col-md-3 .slider-item .slider-content .item-title {
+      font-size: 24px;
+      margin-bottom: 0; }
+    .tpb.tpb-featured_post_list.col-md-4 .slider-item .slider-content .item-description, .tpb.tpb-featured_post_list.col-md-3 .slider-item .slider-content .item-description {
+      display: none; } }
+  @media (max-width: 480px) {
+    .tpb.tpb-featured_post_list {
+      margin-bottom: 12px; } }
+  .tpb.tpb-property_by_taxonomy > .row [class*="col-md-"] {
+    clear: none !important; }
+  .tpb.tpb-image a {
+    display: block; }
+  .tpb.tpb-image img {
+    max-width: 100%;
+    display: block;
+    margin: auto; }
+  .tpb.tpb-text p, .tpb.tpb-text ul, .tpb.tpb-text ol, .tpb.tpb-text h1, .tpb.tpb-text h2, .tpb.tpb-text h3, .tpb.tpb-text h4, .tpb.tpb-text h5, .tpb.tpb-text h6, .tpb.tpb-text table, .tpb.tpb-text img, .tpb.tpb-html p, .tpb.tpb-html ul, .tpb.tpb-html ol, .tpb.tpb-html h1, .tpb.tpb-html h2, .tpb.tpb-html h3, .tpb.tpb-html h4, .tpb.tpb-html h5, .tpb.tpb-html h6, .tpb.tpb-html table, .tpb.tpb-html img {
+    margin: 0 0 12px 0; }
+    .tpb.tpb-text p:last-child, .tpb.tpb-text ul:last-child, .tpb.tpb-text ol:last-child, .tpb.tpb-text h1:last-child, .tpb.tpb-text h2:last-child, .tpb.tpb-text h3:last-child, .tpb.tpb-text h4:last-child, .tpb.tpb-text h5:last-child, .tpb.tpb-text h6:last-child, .tpb.tpb-text table:last-child, .tpb.tpb-text img:last-child, .tpb.tpb-html p:last-child, .tpb.tpb-html ul:last-child, .tpb.tpb-html ol:last-child, .tpb.tpb-html h1:last-child, .tpb.tpb-html h2:last-child, .tpb.tpb-html h3:last-child, .tpb.tpb-html h4:last-child, .tpb.tpb-html h5:last-child, .tpb.tpb-html h6:last-child, .tpb.tpb-html table:last-child, .tpb.tpb-html img:last-child {
+      margin-bottom: 0; }
+  .tpb.tpb-text_icons .panel-box.icon-box {
+    margin-top: 36px;
+    margin-bottom: 24px; }
+  .tpb.tpb-text_icons .services-item li p {
+    margin-bottom: 0; }
+  @media (min-width: 480px) and (max-width: 768px) {
+    .tpb.tpb-text_icons > .row [class*="col-md-"] {
+      width: 50%;
+      clear: none;
+      float: left; }
+      .tpb.tpb-text_icons > .row [class*="col-md-"]:nth-of-type(2n+1) {
+        clear: both; } }
+  @media (max-width: 480px) {
+    .tpb.tpb-text_icons .panel-box.icon-box {
+      float: left;
+      width: 100%;
+      margin-bottom: 12px; }
+    .tpb.tpb-text_icons .services-item li {
+      margin-bottom: 12px; } }
+  .tpb.tpb-social_media .socials-box {
+    margin-top: 0;
+    margin-bottom: 0; }
+  @media (max-width: 480px) {
+    .tpb.tpb-social_media .socials-box a {
+      padding: 0 12px; } }
+  .tpb.tpb-property_list .property-item {
+    margin-bottom: 24px; }
+  @media (max-width: 480px) {
+    .tpb.tpb-property_list .property-item {
+      margin-bottom: 12px; } }
+  .tpb.tpb-property_list .product-slider .property-item {
+    margin-bottom: 0; }
+  .tpb.tpb-property_list .product-slider .slick-track .col-md-2:nth-child(2n+1), .tpb.tpb-property_list .product-slider .slick-track .col-md-2:nth-child(4n+1), .tpb.tpb-property_list .product-slider .slick-track .col-md-2:nth-child(3n+1),
+  .tpb.tpb-property_list .product-slider .slick-track .col-md-3:nth-child(2n+1),
+  .tpb.tpb-property_list .product-slider .slick-track .col-md-3:nth-child(4n+1),
+  .tpb.tpb-property_list .product-slider .slick-track .col-md-3:nth-child(3n+1),
+  .tpb.tpb-property_list .product-slider .slick-track .col-md-4:nth-child(2n+1),
+  .tpb.tpb-property_list .product-slider .slick-track .col-md-4:nth-child(4n+1),
+  .tpb.tpb-property_list .product-slider .slick-track .col-md-4:nth-child(3n+1) {
+    clear: none !important; }
+  @media (min-width: 992px) {
+    .tpb.tpb-testimony.col-md-5 .testimony-item .testimony-profile, .tpb.tpb-testimony.col-md-4 .testimony-item .testimony-profile, .tpb.tpb-testimony.col-md-3 .testimony-item .testimony-profile, .tpb.tpb-testimony_slider.col-md-5 .testimony-item .testimony-profile, .tpb.tpb-testimony_slider.col-md-4 .testimony-item .testimony-profile, .tpb.tpb-testimony_slider.col-md-3 .testimony-item .testimony-profile {
+      clear: both;
+      margin-bottom: 12px; }
+    .tpb.tpb-testimony.col-md-5 .testimony-item.item-left, .tpb.tpb-testimony.col-md-4 .testimony-item.item-left, .tpb.tpb-testimony.col-md-3 .testimony-item.item-left, .tpb.tpb-testimony_slider.col-md-5 .testimony-item.item-left, .tpb.tpb-testimony_slider.col-md-4 .testimony-item.item-left, .tpb.tpb-testimony_slider.col-md-3 .testimony-item.item-left {
+      padding-right: 0; }
+      .tpb.tpb-testimony.col-md-5 .testimony-item.item-left .testimony-profile, .tpb.tpb-testimony.col-md-4 .testimony-item.item-left .testimony-profile, .tpb.tpb-testimony.col-md-3 .testimony-item.item-left .testimony-profile, .tpb.tpb-testimony_slider.col-md-5 .testimony-item.item-left .testimony-profile, .tpb.tpb-testimony_slider.col-md-4 .testimony-item.item-left .testimony-profile, .tpb.tpb-testimony_slider.col-md-3 .testimony-item.item-left .testimony-profile {
+        text-align: left; }
+        .tpb.tpb-testimony.col-md-5 .testimony-item.item-left .testimony-profile img, .tpb.tpb-testimony.col-md-4 .testimony-item.item-left .testimony-profile img, .tpb.tpb-testimony.col-md-3 .testimony-item.item-left .testimony-profile img, .tpb.tpb-testimony_slider.col-md-5 .testimony-item.item-left .testimony-profile img, .tpb.tpb-testimony_slider.col-md-4 .testimony-item.item-left .testimony-profile img, .tpb.tpb-testimony_slider.col-md-3 .testimony-item.item-left .testimony-profile img {
+          float: left;
+          margin-right: 12px; }
+    .tpb.tpb-testimony.col-md-5 .testimony-item.item-right, .tpb.tpb-testimony.col-md-4 .testimony-item.item-right, .tpb.tpb-testimony.col-md-3 .testimony-item.item-right, .tpb.tpb-testimony_slider.col-md-5 .testimony-item.item-right, .tpb.tpb-testimony_slider.col-md-4 .testimony-item.item-right, .tpb.tpb-testimony_slider.col-md-3 .testimony-item.item-right {
+      padding-left: 0; }
+      .tpb.tpb-testimony.col-md-5 .testimony-item.item-right .testimony-profile, .tpb.tpb-testimony.col-md-4 .testimony-item.item-right .testimony-profile, .tpb.tpb-testimony.col-md-3 .testimony-item.item-right .testimony-profile, .tpb.tpb-testimony_slider.col-md-5 .testimony-item.item-right .testimony-profile, .tpb.tpb-testimony_slider.col-md-4 .testimony-item.item-right .testimony-profile, .tpb.tpb-testimony_slider.col-md-3 .testimony-item.item-right .testimony-profile {
+        text-align: right; }
+        .tpb.tpb-testimony.col-md-5 .testimony-item.item-right .testimony-profile img, .tpb.tpb-testimony.col-md-4 .testimony-item.item-right .testimony-profile img, .tpb.tpb-testimony.col-md-3 .testimony-item.item-right .testimony-profile img, .tpb.tpb-testimony_slider.col-md-5 .testimony-item.item-right .testimony-profile img, .tpb.tpb-testimony_slider.col-md-4 .testimony-item.item-right .testimony-profile img, .tpb.tpb-testimony_slider.col-md-3 .testimony-item.item-right .testimony-profile img {
+          float: right;
+          margin-left: 12px; }
+    .tpb.tpb-testimony.col-md-5 .testimony-item [class*="col-md-"], .tpb.tpb-testimony.col-md-4 .testimony-item [class*="col-md-"], .tpb.tpb-testimony.col-md-3 .testimony-item [class*="col-md-"], .tpb.tpb-testimony_slider.col-md-5 .testimony-item [class*="col-md-"], .tpb.tpb-testimony_slider.col-md-4 .testimony-item [class*="col-md-"], .tpb.tpb-testimony_slider.col-md-3 .testimony-item [class*="col-md-"] {
+      width: 100%;
+      position: static;
+      margin: 0 0 12px 0; }
+      .tpb.tpb-testimony.col-md-5 .testimony-item [class*="col-md-"]:last-child, .tpb.tpb-testimony.col-md-4 .testimony-item [class*="col-md-"]:last-child, .tpb.tpb-testimony.col-md-3 .testimony-item [class*="col-md-"]:last-child, .tpb.tpb-testimony_slider.col-md-5 .testimony-item [class*="col-md-"]:last-child, .tpb.tpb-testimony_slider.col-md-4 .testimony-item [class*="col-md-"]:last-child, .tpb.tpb-testimony_slider.col-md-3 .testimony-item [class*="col-md-"]:last-child {
+        margin-bottom: 0; } }
+  @media (max-width: 480px) {
+    .tpb.tpb-testimony .testimony-item, .tpb.tpb-testimony_slider .testimony-item {
+      margin-bottom: 12px; } }
+  .tpb.tpb-number .number-box {
+    margin-bottom: 24px; }
+  @media (max-width: 768px) {
+    .tpb.tpb-number .number-box .number-value {
+      height: 72px; } }
+  @media (max-width: 480px) {
+    .tpb.tpb-number .number-box {
+      margin-bottom: 12px; } }
+  .tpb.tpb-agent_list .profile-box {
+    margin-bottom: 24px; }
+    .tpb.tpb-agent_list .profile-box .panel-header {
+      text-align: center; }
+    @media (max-width: 480px) {
+      .tpb.tpb-agent_list .profile-box {
+        margin-bottom: 12px; } }
+  .tpb.tpb-agent_list .profile-box .profile-header {
+    display: block;
+    width: 100%; }
+    .tpb.tpb-agent_list .profile-box .profile-header .profile-img,
+    .tpb.tpb-agent_list .profile-box .profile-header .profile-title {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; }
+    .tpb.tpb-agent_list .profile-box .profile-header .profile-title {
+      padding-left: 0;
+      text-align: center; }
+  .tpb.tpb-agent_list .profile-box .profile-contact li {
+    float: none;
+    width: 100%;
+    border-right: none;
+    text-align: center; }
+    .tpb.tpb-agent_list .profile-box .profile-contact li:last-child {
+      padding-bottom: 0; }
+  .tpb.tpb-faq .panel-group {
+    margin-bottom: 0; }
+  .tpb.tpb-faq .panel-group .panel {
+    margin-top: 0; }
+    .tpb.tpb-faq .panel-group .panel:last-child {
+      margin-bottom: 0; }
+  @media (max-width: 480px) {
+    .tpb.tpb-faq .accordion .panel-heading .panel-title a {
+      padding: 12px 24px;
+      padding-left: 64px; }
+    .tpb.tpb-faq .accordion .panel-body {
+      padding: 12px; } }
+
+.tpb-row.tpb-stretch-row {
+  overflow: hidden;
+  /* Component */ }
+  .tpb-row.tpb-stretch-row .featured-property-slider.has-background .property-item,
+  .tpb-row.tpb-stretch-row .search-map .panel-box {
+    left: 0; }
+  .tpb-row.tpb-stretch-row .property-simple-search .content-wrapper {
+    padding-left: 0;
+    padding-right: 0; }
+  .tpb-row.tpb-stretch-row .tpb-testimony_slider {
+    margin-bottom: 0; }
+
+.tpb-row.bg-image .testimony-profile {
+  color: #fff; }
