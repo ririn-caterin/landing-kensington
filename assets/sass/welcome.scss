@@ -648,8 +648,7 @@ body {background-color: #fff;}
 		@media (min-width: $screen-md-min) {
 			position: absolute;
 			bottom: 0;
-			left: 0;
-			max-width: 95%;
+			right: -48px;
 		}
 		@media (max-width: $screen-sm-max) {
 			@include horizontal-center(relative);
