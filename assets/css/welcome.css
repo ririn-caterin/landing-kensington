@@ -11,12 +11,310 @@ DESCRIPTION:
 2) Theme Styling, on _apps.scss 
 
 */
+/* Bootstrap*/
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /* Core variables and mixins */
+/**/
+/* Variables*/
+/* --------------------------------------------------*/
+/*== Colors*/
+/**/
+/*## Gray and brand colors for use across Bootstrap.*/
+/* #222*/
+/* #333*/
+/* #555*/
+/* #777*/
+/* #eee*/
+/*== Scaffolding*/
+/**/
+/*## Settings for some of the most global styles.*/
+/*** Background color for `<body>`.*/
+/*** Global text color on `<body>`.*/
+/*** Global textual link color.*/
+/*** Link hover color set via `darken()` function.*/
+/*** Link hover decoration.*/
+/*== Typography*/
+/**/
+/*## Font, line-height, and color for body text, headings, and more.*/
+/*** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.*/
+/* ~36px*/
+/* ~18px*/
+/* ~16px*/
+/* ~12px*/
+/* ~36px*/
+/* ~30px*/
+/* ~24px*/
+/* ~18px*/
+/* ~12px*/
+/*** Unit-less `line-height` for use in components like buttons.*/
+/* 24/14*/
+/*** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.*/
+/* ~20px*/
+/*** By default, this inherits from the `<body>`.*/
+/*== Iconography*/
+/**/
+/*## Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.*/
+/*** Load fonts from this directory.*/
+/* [converter] If $bootstrap-sass-asset-helper if used, provide path relative to the assets load path.*/
+/* [converter] This is because some asset helpers, such as Sprockets, do not work with file-relative paths.*/
+/*** File name for all font files.*/
+/*** Element ID within SVG icon file.*/
+/*== Components*/
+/**/
+/*## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).*/
+/* extra decimals for Win 8.1 Chrome*/
+/*** Global color for active items (e.g., navs or dropdowns).*/
+/*** Global background color for active items (e.g., navs or dropdowns).*/
+/*** Width of the `border` for generating carets that indicate dropdowns.*/
+/*** Carets increase slightly in size for larger components.*/
+/*== Tables*/
+/**/
+/*## Customizes the `.table` component with basic values, each used across all table variations.*/
+/*** Padding for `<th>`s and `<td>`s.*/
+/*** Padding for cells in `.table-condensed`.*/
+/*** Default background color used for all tables.*/
+/*** Background color used for `.table-striped`.*/
+/*** Background color used for `.table-hover`.*/
+/*** Border color for table and cell borders.*/
+/*== Buttons*/
+/**/
+/*## For each of Bootstrap's buttons, define text, background and border color.*/
+/* Allows for customizing button radius independently from global border radius*/
+/*== Forms*/
+/**/
+/*##*/
+/*** `<input>` background color*/
+/*** `<input disabled>` background color*/
+/*** Text color for `<input>`s*/
+/*** `<input>` border color*/
+/* TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4*/
+/*** Default `.form-control` border radius*/
+/* This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.*/
+/*** Large `.form-control` border radius*/
+/*** Small `.form-control` border radius*/
+/*** Border color for inputs on focus*/
+/*** Placeholder text color*/
+/*** Default `.form-control` height*/
+/*** Large `.form-control` height*/
+/*** Small `.form-control` height*/
+/*** `.form-group` margin*/
+/*** Background color for textual input addons*/
+/*** Border color for textual input addons*/
+/*** Disabled cursor for form controls and buttons.*/
+/*== Dropdowns*/
+/**/
+/*## Dropdown menu container and contents.*/
+/*** Background for the dropdown menu.*/
+/*** Dropdown menu `border-color`.*/
+/*** Dropdown menu `border-color` **for IE8**.*/
+/*** Divider color for between dropdown items.*/
+/*** Dropdown link text color.*/
+/*** Hover color for dropdown links.*/
+/*** Hover background for dropdown links.*/
+/*** Active dropdown menu item text color.*/
+/*** Active dropdown menu item background color.*/
+/*** Disabled dropdown menu item background color.*/
+/*** Text color for headers within dropdown menus.*/
+/*** Deprecated `$dropdown-caret-color` as of v3.1.0*/
+/*-- Z-index master list*/
+/**/
+/* Warning: Avoid customizing these values. They're used for a bird's eye view*/
+/* of components dependent on the z-axis and are designed to all work together.*/
+/**/
+/* Note: These variables are not generated into the Customizer.*/
+/*== Media queries breakpoints*/
+/**/
+/*## Define the breakpoints at which your layout will change, adapting to different screen sizes.*/
+/* Extra small screen / phone*/
+/*** Deprecated `$screen-xs` as of v3.0.1*/
+/*** Deprecated `$screen-xs-min` as of v3.2.0*/
+/*** Deprecated `$screen-phone` as of v3.0.1*/
+/* Small screen / tablet*/
+/*** Deprecated `$screen-sm` as of v3.0.1*/
+/*** Deprecated `$screen-tablet` as of v3.0.1*/
+/* Medium screen / desktop*/
+/*** Deprecated `$screen-md` as of v3.0.1*/
+/*** Deprecated `$screen-desktop` as of v3.0.1*/
+/* Large screen / wide desktop*/
+/*** Deprecated `$screen-lg` as of v3.0.1*/
+/*** Deprecated `$screen-lg-desktop` as of v3.0.1*/
+/* So media queries don't overlap when required, provide a maximum*/
+/*== Grid system*/
+/**/
+/*## Define your custom responsive grid.*/
+/*** Number of columns in the grid.*/
+/*** Padding between columns. Gets divided in half for the left and right.*/
+/* Navbar collapse*/
+/*** Point at which the navbar becomes uncollapsed.*/
+/*** Point at which the navbar begins collapsing.*/
+/*== Container sizes*/
+/**/
+/*## Define the maximum width of `.container` for different screen sizes.*/
+/* Small screen / tablet*/
+/*** For `$screen-sm-min` and up.*/
+/* Medium screen / desktop*/
+/*** For `$screen-md-min` and up.*/
+/* Large screen / wide desktop*/
+/*** For `$screen-lg-min` and up.*/
+/*== Navbar*/
+/**/
+/*##*/
+/* Basics of a navbar*/
+/* Navbar links*/
+/* Navbar brand label*/
+/* Navbar toggle*/
+/*=== Inverted navbar*/
+/* Reset inverted navbar basics*/
+/* Inverted navbar links*/
+/* Inverted navbar brand label*/
+/* Inverted navbar toggle*/
+/*== Navs*/
+/**/
+/*##*/
+/*=== Shared nav styles*/
+/*== Tabs*/
+/*== Pills*/
+/*== Pagination*/
+/**/
+/*##*/
+/*== Pager*/
+/**/
+/*##*/
+/*== Jumbotron*/
+/**/
+/*##*/
+/*== Form states and alerts*/
+/**/
+/*## Define colors for form feedback states and, by default, alerts.*/
+/*== Tooltips*/
+/**/
+/*##*/
+/*** Tooltip max width*/
+/*** Tooltip text color*/
+/*** Tooltip background color*/
+/*** Tooltip arrow width*/
+/*** Tooltip arrow color*/
+/*== Popovers*/
+/**/
+/*##*/
+/*** Popover body background color*/
+/*** Popover maximum width*/
+/*** Popover border color*/
+/*** Popover fallback border color*/
+/*** Popover title background color*/
+/*** Popover arrow width*/
+/*** Popover arrow color*/
+/*** Popover outer arrow width*/
+/*** Popover outer arrow color*/
+/*** Popover outer arrow fallback color*/
+/*== Labels*/
+/**/
+/*##*/
+/*** Default label background color*/
+/*** Primary label background color*/
+/*** Success label background color*/
+/*** Info label background color*/
+/*** Warning label background color*/
+/*** Danger label background color*/
+/*** Default label text color*/
+/*** Default text color of a linked label*/
+/*== Modals*/
+/**/
+/*##*/
+/*** Padding applied to the modal body*/
+/*** Padding applied to the modal title*/
+/*** Modal title line-height*/
+/*** Background color of modal content area*/
+/*** Modal content border color*/
+/*** Modal content border color **for IE8***/
+/*** Modal backdrop background color*/
+/*** Modal backdrop opacity*/
+/*** Modal header border color*/
+/*** Modal footer border color*/
+/*== Alerts*/
+/**/
+/*## Define alert colors, border radius, and padding.*/
+/*== Progress bars*/
+/**/
+/*##*/
+/*** Background color of the whole progress component*/
+/*** Progress bar text color*/
+/*** Variable for setting rounded corners on progress bar.*/
+/*** Default progress bar color*/
+/*** Success progress bar color*/
+/*** Warning progress bar color*/
+/*** Danger progress bar color*/
+/*** Info progress bar color*/
+/*== List group*/
+/**/
+/*##*/
+/*** Background color on `.list-group-item`*/
+/*** `.list-group-item` border color*/
+/*** List group border radius*/
+/*** Background color of single list items on hover*/
+/*** Text color of active list items*/
+/*** Background color of active list items*/
+/*** Border color of active list elements*/
+/*** Text color for content within active list items*/
+/*** Text color of disabled list items*/
+/*** Background color of disabled list items*/
+/*** Text color for content within disabled list items*/
+/*== Panels*/
+/**/
+/*##*/
+/*** Border color for elements within panels*/
+/*== Thumbnails*/
+/**/
+/*##*/
+/*** Padding around the thumbnail image*/
+/*** Thumbnail background color*/
+/*** Thumbnail border color*/
+/*** Thumbnail border radius*/
+/*** Custom text color for thumbnail captions*/
+/*** Padding around the thumbnail caption*/
+/*== Wells*/
+/**/
+/*##*/
+/*== Badges*/
+/**/
+/*##*/
+/*** Linked badge text color on hover*/
+/*** Badge text color in active nav link*/
+/*** Badge background color in active nav link*/
+/*== Breadcrumbs*/
+/**/
+/*##*/
+/*** Breadcrumb background color*/
+/*** Breadcrumb text color*/
+/*** Text color of current page in the breadcrumb*/
+/*** Textual separator for between breadcrumb elements*/
+/*== Carousel*/
+/**/
+/*##*/
+/*== Close*/
+/**/
+/*##*/
+/*== Code*/
+/**/
+/*##*/
+/*== Type*/
+/**/
+/*##*/
+/*** Horizontal offset for forms and lists.*/
+/*** Text muted color*/
+/*** Abbreviations and acronyms border color*/
+/*** Headings small color*/
+/*** Blockquote small color*/
+/*** Blockquote font size*/
+/*** Blockquote border color*/
+/*** Page header border color*/
+/*** Width of horizontal description list titles*/
+/*** Point at which .dl-horizontal becomes horizontal*/
+/*** Horizontal line color.*/
 /* Reset and dependencies */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
@@ -2044,7 +2342,7 @@ select[multiple].input-lg,
 .btn {
   display: inline-block;
   margin-bottom: 0;
-  font-weight: 500;
+  font-weight: 400;
   text-align: center;
   text-transform: uppercase;
   vertical-align: middle;
@@ -3701,11 +3999,11 @@ tbody.collapse.in {
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/popovers";
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/carousel"; */
 /* Utility classes */
-.clearfix:before, .clearfix:after {
+.clearfix:before, .theme-features .feature-list:before, .clearfix:after, .theme-features .feature-list:after {
   content: " ";
   display: table; }
 
-.clearfix:after {
+.clearfix:after, .theme-features .feature-list:after {
   clear: both; }
 
 .center-block {
@@ -3927,7 +4225,9 @@ tbody.collapse.in {
     .row-eq-height .col-sm-1, .row-eq-height .col-md-1, .row-eq-height .col-lg-1, .row-eq-height .col-sm-2, .row-eq-height .col-md-2, .row-eq-height .col-lg-2, .row-eq-height .col-sm-3, .row-eq-height .col-md-3, .row-eq-height .col-lg-3, .row-eq-height .col-sm-4, .row-eq-height .col-md-4, .row-eq-height .col-lg-4, .row-eq-height .col-sm-5, .row-eq-height .col-md-5, .row-eq-height .col-lg-5, .row-eq-height .col-sm-6, .row-eq-height .col-md-6, .row-eq-height .col-lg-6, .row-eq-height .col-sm-7, .row-eq-height .col-md-7, .row-eq-height .col-lg-7, .row-eq-height .col-sm-8, .row-eq-height .col-md-8, .row-eq-height .col-lg-8, .row-eq-height .col-sm-9, .row-eq-height .col-md-9, .row-eq-height .col-lg-9, .row-eq-height .col-sm-10, .row-eq-height .col-md-10, .row-eq-height .col-lg-10, .row-eq-height .col-sm-11, .row-eq-height .col-md-11, .row-eq-height .col-lg-11, .row-eq-height .col-sm-12, .row-eq-height .col-md-12, .row-eq-height .col-lg-12 {
       display: flex; } }
 
+/* Variables*/
 /* Icon Fonts */
+/* Cores*/
 /*
 
 Tonjoo Property App Style
@@ -3984,10 +4284,11 @@ TABLE OF CONTENTS:
 .panel-box {
   background-color: #fff;
   border-radius: 3px;
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.11);
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.11); }
 
 .container-fluid--custom {
-  max-width: 1440px;
+  max-width: 1600px;
   margin-left: 12px;
   margin-right: 12px;
   padding: 0; }
@@ -4010,20 +4311,22 @@ TABLE OF CONTENTS:
   right: 0;
   z-index: 9;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2d3e50+0,2d3e50+100&1+0,0.4+100 */
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5) 50%, transparent 100%);
   /* FF3.6-15 */
   background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 50%, transparent 100%);
   /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(0, 0, 0, 0.5)), to(transparent));
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.5) 50%, transparent 100%);
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 50%, transparent 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
   @media (max-width: 991px) {
     #header.open {
       height: 100%;
       /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2d3e50+0,2d3e50+100&1+0,0.4+100 */
-      background: -moz-linear-gradient(top, #2d3e50 0%, rgba(45, 62, 80, 0.4) 100%);
       /* FF3.6-15 */
       background: -webkit-linear-gradient(top, #2d3e50 0%, rgba(45, 62, 80, 0.4) 100%);
       /* Chrome10-25,Safari5.1-6 */
+      background: -webkit-gradient(linear, left top, left bottom, from(#2d3e50), to(rgba(45, 62, 80, 0.4)));
+      background: -o-linear-gradient(top, #2d3e50 0%, rgba(45, 62, 80, 0.4) 100%);
       background: linear-gradient(to bottom, #2d3e50 0%, rgba(45, 62, 80, 0.4) 100%);
       /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d3e50', endColorstr='#662d3e50',GradientType=0 );
@@ -4052,7 +4355,7 @@ TABLE OF CONTENTS:
           max-height: 25px; } }
   @media (min-width: 992px) {
     .navbar-transparent .navbar-btn {
-      margin-left: 24px;
+      margin-left: 36px;
       padding-left: 24px;
       padding-right: 24px; } }
   .navbar-transparent .navbar-toggle {
@@ -4084,7 +4387,7 @@ body {
   font-size: 48px;
   line-height: 48px;
   font-weight: bold;
-  margin: 0 0 12px;
+  margin: 30px 0 12px;
   color: #43D3B1; }
   .heading-title--black {
     color: #111111; }
@@ -4123,8 +4426,8 @@ body {
   -moz-transform: translate(-50%, -50%); }
 
 .heading {
-  max-width: 768px;
-  margin: 0 auto 36px; }
+  max-width: 810px;
+  margin: 0 auto 60px; }
 
 @media (max-width: 991px) {
   .heading {
@@ -4194,61 +4497,42 @@ body {
       margin-right: 0;
       margin-bottom: 12px; } }
 
-.section-demo .demo-item {
-  text-align: center;
-  margin-bottom: 60px; }
+/* Section Demo*/
+.section-demo {
+  text-align: center; }
+  .section-demo .demo-item {
+    margin-bottom: 60px; }
+  .section-demo .title-style {
+    margin: 40px auto 60px; }
+  .section-demo .title-homepage {
+    font-size: 18px; }
+  .section-demo img {
+    max-width: 100%; }
+  .section-demo a.btn {
+    display: inline-block;
+    line-height: 14px;
+    padding: 10px 25px;
+    letter-spacing: 1px; }
   @media (max-width: 767px) {
+    .section-demo .heading {
+      margin-bottom: 0; }
+      .section-demo .heading-description {
+        margin-bottom: 0; }
     .section-demo .demo-item {
-      margin-bottom: 48px; } }
-  .section-demo .demo-item a {
-    display: block;
-    position: relative;
-    padding: 0 36px; }
-    @media (max-width: 991px) {
-      .section-demo .demo-item a {
-        padding: 0 24px; } }
-    @media (max-width: 767px) {
-      .section-demo .demo-item a {
-        padding: 0 12px; } }
-  .section-demo .demo-item a img {
-    transition: all ease-in-out 0.3s;
-    -webkit-transition: all ease-in-out 0.3s;
-    -moz-transition: all ease-in-out 0.3s;
-    display: block;
-    width: 100%; }
-  .section-demo .demo-item a span {
-    transition: all ease-in-out 0.3s;
-    -webkit-transition: all ease-in-out 0.3s;
-    -moz-transition: all ease-in-out 0.3s;
-    z-index: 1;
-    padding-left: 24px;
-    padding-right: 24px;
-    opacity: 0;
-    visibility: hidden;
-    margin-top: 20%; }
-    .section-demo .demo-item a span i {
-      font-size: 24px;
-      line-height: 24px;
-      float: left;
-      margin-right: 8px; }
-  .section-demo .demo-item a:hover img {
-    filter: grayscale(100%);
-    opacity: 0.3; }
-  .section-demo .demo-item a:hover span {
-    margin-top: 0;
-    opacity: 1;
-    visibility: visible; }
-  .section-demo .demo-item h4 {
-    font-weight: bold;
-    margin-top: 24px; }
+      margin-bottom: 30px; }
+    .section-demo .title-style {
+      margin: 40px auto;
+      font-size: 24px; } }
 
+/* Setion Access*/
 .section-access {
   font-size: 24px;
   text-align: center;
   color: #FFF; }
-  .section-access h3 {
+  .section-access h2 {
     margin: 24px 0;
-    font-weight: 600; }
+    font-weight: 600;
+    font-size: 25px; }
   .section-access__account {
     line-height: 30px; }
   .section-access__button {
@@ -4266,6 +4550,7 @@ body {
   .section-access strong {
     font-weight: 600; }
 
+/* Section Features*/
 .template-features {
   background-color: #F7F7F7; }
   @media (max-width: 991px) {
@@ -4279,7 +4564,11 @@ body {
     position: relative;
     background-position: center;
     background-size: auto;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    /* Yellow*/
+    /* Orange*/
+    /* Green*/
+    /* Red*/ }
     @media (min-width: 992px) {
       .template-features .feature-item {
         height: 360px; } }
@@ -4312,30 +4601,33 @@ body {
     @media (min-width: 991px) {
       .template-features .feature-item.bg-pos-right:before {
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+47,0+100 */
-        background: -moz-linear-gradient(left, white 0%, white 47%, rgba(255, 255, 255, 0) 100%);
         /* FF3.6-15 */
         background: -webkit-linear-gradient(left, white 0%, white 47%, rgba(255, 255, 255, 0) 100%);
         /* Chrome10-25,Safari5.1-6 */
+        background: -webkit-gradient(linear, left top, right top, from(white), color-stop(47%, white), to(rgba(255, 255, 255, 0)));
+        background: -o-linear-gradient(left, white 0%, white 47%, rgba(255, 255, 255, 0) 100%);
         background: linear-gradient(to right, white 0%, white 47%, rgba(255, 255, 255, 0) 100%);
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
         /* IE6-9 */ }
       .template-features .feature-item.bg-pos-left:before {
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+45 */
-        background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 45%, white 100%);
         /* FF3.6-15 */
         background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 45%, white 100%);
         /* Chrome10-25,Safari5.1-6 */
+        background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(45%, white), to(white));
+        background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 45%, white 100%);
         background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 45%, white 100%);
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
         /* IE6-9 */ }
       .template-features .feature-item.bg-pos-left--full:before {
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+45 */
-        background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 90%, white 100%);
         /* FF3.6-15 */
         background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 90%, white 100%);
         /* Chrome10-25,Safari5.1-6 */
+        background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(90%, white), to(white));
+        background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 90%, white 100%);
         background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 90%, white 100%);
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
@@ -4343,10 +4635,11 @@ body {
     @media (max-width: 768px) {
       .template-features .feature-item.bg-pos-right:before, .template-features .feature-item.bg-pos-left:before {
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+50,0+100 */
-        background: -moz-linear-gradient(top, white 0%, white 50%, rgba(255, 255, 255, 0) 100%);
         /* FF3.6-15 */
         background: -webkit-linear-gradient(top, white 0%, white 50%, rgba(255, 255, 255, 0) 100%);
         /* Chrome10-25,Safari5.1-6 */
+        background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(50%, white), to(rgba(255, 255, 255, 0)));
+        background: -o-linear-gradient(top, white 0%, white 50%, rgba(255, 255, 255, 0) 100%);
         background: linear-gradient(to bottom, white 0%, white 50%, rgba(255, 255, 255, 0) 100%);
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
@@ -4453,6 +4746,7 @@ body {
   .template-features .feature-item:last-child {
     margin-bottom: 0; }
 
+/* Section Built in*/
 .builtin-booking-module {
   padding-bottom: 0; }
   .builtin-booking-module:before {
@@ -4466,10 +4760,11 @@ body {
     @media (min-width: 992px) {
       .builtin-booking-module:before {
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2d3e50+0,2d3e50+100&0+0,1+100 */
-        background: -moz-linear-gradient(left, rgba(45, 62, 80, 0) 0%, #2d3e50 100%);
         /* FF3.6-15 */
         background: -webkit-linear-gradient(left, rgba(45, 62, 80, 0) 0%, #2d3e50 100%);
         /* Chrome10-25,Safari5.1-6 */
+        background: -webkit-gradient(linear, left top, right top, from(rgba(45, 62, 80, 0)), to(#2d3e50));
+        background: -o-linear-gradient(left, rgba(45, 62, 80, 0) 0%, #2d3e50 100%);
         background: linear-gradient(to right, rgba(45, 62, 80, 0) 0%, #2d3e50 100%);
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002d3e50', endColorstr='#2d3e50',GradientType=1 );
@@ -4477,10 +4772,11 @@ body {
     @media (max-width: 991px) {
       .builtin-booking-module:before {
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2d3e50+0,2d3e50+100&0.4+0,1+100 */
-        background: -moz-linear-gradient(top, rgba(45, 62, 80, 0.4) 0%, #2d3e50 100%);
         /* FF3.6-15 */
         background: -webkit-linear-gradient(top, rgba(45, 62, 80, 0.4) 0%, #2d3e50 100%);
         /* Chrome10-25,Safari5.1-6 */
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(45, 62, 80, 0.4)), to(#2d3e50));
+        background: -o-linear-gradient(top, rgba(45, 62, 80, 0.4) 0%, #2d3e50 100%);
         background: linear-gradient(to bottom, rgba(45, 62, 80, 0.4) 0%, #2d3e50 100%);
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#662d3e50', endColorstr='#2d3e50',GradientType=0 );
@@ -4489,6 +4785,9 @@ body {
     .builtin-booking-module .obj-builtin-booking {
       position: absolute;
       bottom: 0;
+      right: 0; } }
+  @media (min-width: 1200px) {
+    .builtin-booking-module .obj-builtin-booking {
       right: -48px; } }
   @media (max-width: 991px) {
     .builtin-booking-module .obj-builtin-booking {
@@ -4500,6 +4799,7 @@ body {
       -moz-transform: translateX(-50%);
       width: 100%;
       max-height: 380px;
+      -o-object-fit: contain;
       object-fit: contain; } }
   .builtin-booking-module .heading {
     margin-bottom: 60px; }
@@ -4520,51 +4820,46 @@ body {
     .builtin-booking-module .heading-description {
       margin-bottom: 12px; } }
 
-.theme-feauters {
-  background-color: #F7F7F7; }
+/* Section Features*/
+.theme-features {
+  background-color: #F7F7F7;
+  color: #253342; }
   @media (max-width: 767px) {
-    .theme-feauters .container {
+    .theme-features .container {
       padding-left: 24px;
       padding-right: 24px; } }
-  .theme-feauters .feature-box {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-left: -12px;
-    margin-right: -12px; }
-  .theme-feauters .item-column {
-    padding-left: 12px;
-    padding-right: 12px;
-    width: calc(100% / 8);
-    margin-bottom: 24px;
-    display: flex; }
-    @media (max-width: 991px) {
-      .theme-feauters .item-column {
-        width: calc(100% / 4); } }
-    @media (max-width: 767px) {
-      .theme-feauters .item-column {
-        width: calc(100% / 2);
-        padding-left: 8px;
-        padding-right: 8px;
-        margin-bottom: 16px; } }
-  .theme-feauters .feature-item {
-    width: 100%;
-    padding: 12px 0;
-    text-align: center;
-    border-radius: 3px;
-    background-color: #fff;
-    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.11); }
-  .theme-feauters .feature-item span {
-    line-height: 18px;
-    display: block; }
-  .theme-feauters .feature-item .text-icon,
-  .theme-feauters .feature-item .ion {
-    font-size: 36px;
-    line-height: 36px;
-    color: #43D3B1;
-    display: block;
-    margin-bottom: 6px; }
+  .theme-features .feature-list {
+    position: relative; }
+  .theme-features .feature-box {
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 30px; }
+    @media (min-width: 768px) {
+      .theme-features .feature-box {
+        display: inline-block;
+        float: left;
+        width: 50%;
+        padding-right: 36px; } }
+    @media (min-width: 1200px) {
+      .theme-features .feature-box {
+        width: 33.333%; } }
+  .theme-features .feature-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 1; }
+    .theme-features .feature-icon > * {
+      color: #43D3B1;
+      font-size: 36px; }
+  .theme-features .feature-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px; }
+  .theme-features .feature-text {
+    max-height: 96px;
+    overflow: hidden; }
 
+/* Section Column Menu*/
 .column-menu {
   padding: 0; }
   .column-menu .menu-item {
@@ -4601,6 +4896,37 @@ body {
   .column-menu .heading-description {
     color: #fff; }
 
+/* Section Purchase*/
+.purchase-box {
+  position: relative;
+  color: #FFF;
+  z-index: 1;
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px; }
+  .purchase-box h2 {
+    font-size: 48px;
+    line-height: 1.25;
+    font-weight: bold; }
+  .purchase-box p {
+    font-size: 18px;
+    margin-bottom: 40px; }
+  @media (min-width: 768px) {
+    .purchase-box a.btn {
+      font-size: 18px;
+      padding: 12px 60px; } }
+  @media (max-width: 991px) {
+    .purchase-box h2 {
+      font-size: 36px; } }
+  @media (max-width: 767px) {
+    .purchase-box-box {
+      padding: 0 15px; }
+    .purchase-box h2 {
+      font-size: 24px; }
+    .purchase-box p {
+      margin-bottom: 20px; } }
+
+/* Footer*/
 #footer {
   padding: 24px 0;
   background-color: #000000; }
