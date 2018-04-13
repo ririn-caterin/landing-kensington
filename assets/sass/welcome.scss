@@ -522,6 +522,27 @@ body {background-color: #fff;}
 			.obj-compare {
 				left: -80px;
 			}
+
+			&--extra {
+				.col-md-7 {
+					overflow: hidden;
+
+					&:after {
+						content: '';
+					    position: absolute;
+					    bottom: 0;
+					    left: 12px;
+					    right: 12px;
+					    background: linear-gradient(to bottom, transparent, #fff );
+					    height: 50%;
+					}
+				}
+
+				.obj-extrafee {
+					max-width: 100%;
+					margin-top: 60px;
+				}
+			}
 		}
 		@media (max-width: $screen-sm-max) {
 			text-align: center;
@@ -545,6 +566,10 @@ body {background-color: #fff;}
 			.obj-calendar,
 			.obj-mark-info {
 				bottom: 48px;
+			}
+
+			.obj-extrafee {
+				max-width: 100%;
 			}
 		}
 		@media (max-width: $screen-xs-max) {
@@ -609,6 +634,17 @@ body {background-color: #fff;}
 
 			.ion {
 				background-color: #D32C31;
+			}
+		}
+
+		/* Blue*/
+		&--blue {
+			.feature-title {
+				color: #0485fd;
+			}
+
+			.ion {
+				background-color: #0485fd;
 			}
 		}
 	}
