@@ -32,8 +32,6 @@
 	}
 
 	function loadSource(element) {
-		element.classList.add('fade-in');
-		element.classList.remove('lazy-hidden');
 		if(element.dataset && element.dataset.src) {
 			element.src = element.dataset.src;
 		}
@@ -41,5 +39,9 @@
 		if(element.dataset && element.dataset.srcset) {
 			element.srcset = element.dataset.srcset;
 		}
+
+		element.classList.add('fade-in');
+		element.classList.remove('lazy-hidden');
+		element.parentNode.classList.remove('img-container');
 	}
 }(jQuery));

@@ -4299,6 +4299,30 @@ TABLE OF CONTENTS:
       padding-left: 12px;
       padding-right: 12px; } }
 
+img.img-lazy {
+  display: block;
+  margin: auto;
+  min-height: 240px;
+  -webkit-transition: all ease .3s;
+  -o-transition: all ease .3s;
+  transition: all ease .3s; }
+  @media (max-width: 480px) {
+    img.img-lazy {
+      min-height: 170px; } }
+
+.lazy-hidden {
+  opacity: 0;
+  min-height: 240px; }
+
+.fade-in {
+  opacity: 1; }
+
+.img-container {
+  background-color: #aeaeae;
+  -webkit-transition: all ease .3s;
+  -o-transition: all ease .3s;
+  transition: all ease .3s; }
+
 /* header
 --------------------------------------------------------- */
 #header {
@@ -4657,6 +4681,23 @@ body {
       left: -30px;
       font-size: 36px;
       text-align: center; }
+    .template-features .feature-item--extra .col-md-7 {
+      overflow: hidden; }
+      .template-features .feature-item--extra .col-md-7:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 12px;
+        right: 12px;
+        background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#fff));
+        background: -webkit-linear-gradient(top, transparent, #fff);
+        background: -o-linear-gradient(top, transparent, #fff);
+        background: linear-gradient(to bottom, transparent, #fff);
+        height: 50%; }
+    .template-features .feature-item--extra .obj-extrafee {
+      max-width: 100%;
+      -o-object-fit: contain;
+      object-fit: contain; }
     @media (min-width: 992px) {
       .template-features .feature-item.content-right .ion {
         left: auto;
@@ -4682,18 +4723,7 @@ body {
         right: -72px; }
       .template-features .feature-item .obj-compare {
         left: -80px; }
-      .template-features .feature-item--extra .col-md-7 {
-        overflow: hidden; }
-        .template-features .feature-item--extra .col-md-7:after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          left: 12px;
-          right: 12px;
-          background: linear-gradient(to bottom, transparent, #fff);
-          height: 50%; }
       .template-features .feature-item--extra .obj-extrafee {
-        max-width: 100%;
         margin-top: 60px; } }
     @media (max-width: 991px) {
       .template-features .feature-item {
@@ -4723,9 +4753,7 @@ body {
           max-width: 760px; }
         .template-features .feature-item .obj-calendar,
         .template-features .feature-item .obj-mark-info {
-          bottom: 48px; }
-        .template-features .feature-item .obj-extrafee {
-          max-width: 100%; } }
+          bottom: 48px; } }
     @media (max-width: 767px) {
       .template-features .feature-item .ion {
         width: 48px;

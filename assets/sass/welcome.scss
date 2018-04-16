@@ -66,6 +66,35 @@ DESCRIPTION:
  	}
  }
 
+img.img-lazy {
+ 	display: block;
+ 	margin: auto;
+ 	min-height: 240px;
+ 	-webkit-transition: all ease .3s;
+	-o-transition: all ease .3s;
+	transition: all ease .3s;
+
+ 	@media (max-width: $screen-xs-min) {
+		min-height: 170px;
+ 	}
+}
+
+.lazy-hidden {
+	opacity: 0;
+	min-height: 240px;	
+}
+
+.fade-in {
+	opacity: 1;
+}
+
+.img-container {
+	background-color: #aeaeae;
+	-webkit-transition: all ease .3s;
+	-o-transition: all ease .3s;
+	transition: all ease .3s;
+}
+
 /* header
 --------------------------------------------------------- */
 #header {
@@ -497,6 +526,32 @@ body {background-color: #fff;}
 			font-size: 36px;
 			text-align: center;
 		}
+
+		&--extra {
+			.col-md-7 {
+				overflow: hidden;
+
+				&:after {
+					content: '';
+				    position: absolute;
+				    bottom: 0;
+				    left: 12px;
+				    right: 12px;
+				    background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#fff) );
+				    background: -webkit-linear-gradient(top, transparent, #fff );
+				    background: -o-linear-gradient(top, transparent, #fff );
+				    background: linear-gradient(to bottom, transparent, #fff );
+				    height: 50%;
+				}
+			}
+
+			.obj-extrafee {
+				max-width: 100%;
+				-o-object-fit: contain;
+				   object-fit: contain;
+			}
+		}
+
 		@media (min-width: $screen-md-min) {
 			&.content-right .ion {
 				left: auto;
@@ -524,22 +579,7 @@ body {background-color: #fff;}
 			}
 
 			&--extra {
-				.col-md-7 {
-					overflow: hidden;
-
-					&:after {
-						content: '';
-					    position: absolute;
-					    bottom: 0;
-					    left: 12px;
-					    right: 12px;
-					    background: linear-gradient(to bottom, transparent, #fff );
-					    height: 50%;
-					}
-				}
-
 				.obj-extrafee {
-					max-width: 100%;
 					margin-top: 60px;
 				}
 			}
@@ -566,10 +606,6 @@ body {background-color: #fff;}
 			.obj-calendar,
 			.obj-mark-info {
 				bottom: 48px;
-			}
-
-			.obj-extrafee {
-				max-width: 100%;
 			}
 		}
 		@media (max-width: $screen-xs-max) {
